@@ -37,7 +37,28 @@ export default function Home() {
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Descobrir como funciona</a></div>
           <ul className="trust"><li>PDF personalizado</li><li>Leitura sem rótulos</li><li>Entrega digital</li></ul>
         </div>
-        <div className="heroConstellation" aria-hidden="true"><span>✦</span><span>☾</span><span>✧</span><span>✦</span></div>
+        <div className="fitTable" aria-label="Para quem este Storybook é indicado">
+          <article className="fitYes">
+            <span className="fitIcon" aria-hidden="true">✦</span>
+            <h2>Este livro é para você se…</h2>
+            <ul>
+              <li>quer dar à criança um presente único, afetivo e feito só para ela;</li>
+              <li>deseja compreender melhor seu temperamento, emoções e talentos;</li>
+              <li>prefere uma leitura leve, prática e sem excesso de termos astrológicos;</li>
+              <li>valoriza uma memória que poderá ser relida em diferentes fases da infância.</li>
+            </ul>
+          </article>
+          <article className="fitNo">
+            <span className="fitIcon" aria-hidden="true">☾</span>
+            <h2>Este livro não é para você se…</h2>
+            <ul>
+              <li>procura previsões fechadas ou respostas definitivas sobre o futuro;</li>
+              <li>espera um diagnóstico psicológico, médico ou comportamental;</li>
+              <li>não tem acesso ao horário exato registrado no nascimento;</li>
+              <li>quer um conteúdo genérico que poderia servir para qualquer criança.</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
@@ -54,13 +75,19 @@ export default function Home() {
 
       <section className="section meaning">
         <div className="storybookPreview">
-          <div className="videoFrame">
-            <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" poster="/assets/media/ceu-de-hugo-poster.jpg" aria-label="Prévia em rolagem do Storybook O Céu de Hugo" onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.55; }}>
-              <source src="/assets/media/ceu-de-hugo-scroll.mp4" type="video/mp4" />
-            </video>
-            <span className="videoBadge">Exemplo real</span>
+          <div className="laptop" aria-label="Mockup de laptop exibindo o Storybook O Céu de Breno">
+            <div className="laptopScreen">
+              <div className="camera" aria-hidden="true" />
+              <div className="videoFrame">
+                <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Prévia em rolagem do Storybook O Céu de Breno" onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.55; }}>
+                  <source src="/assets/media/ceu-de-breno-scroll.mp4" type="video/mp4" />
+                </video>
+                <span className="videoBadge">Exemplo real</span>
+              </div>
+            </div>
+            <div className="laptopBase" aria-hidden="true"><span /></div>
           </div>
-          <p><strong>O Céu de Hugo</strong><span>Veja como o livro percorre personalidade, emoções, talentos e formas de acolher.</span></p>
+          <p><strong>O Céu de Breno</strong><span>Veja como o livro percorre personalidade, emoções, talentos e formas de acolher.</span></p>
         </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2>Não é um manual sobre quem a criança deve ser.</h2><p className="muted">É um convite para observar com mais delicadeza. O Storybook apresenta potenciais, necessidades emocionais e formas de acolhimento em uma narrativa fácil de compreender — sem determinismo, sem linguagem pesada e sem rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>

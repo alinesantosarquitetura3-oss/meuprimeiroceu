@@ -63,6 +63,29 @@ export default function Home() {
 
       <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
 
+      <section className="productDesire" aria-labelledby="product-desire-title">
+        <div className="productMockup">
+          <span className="mockupSpark mockupSparkOne" aria-hidden="true">✦</span>
+          <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
+          <img
+            src="/assets/media/mockup-livro-breno.webp"
+            alt="Representação de O Céu de Breno como um livro infantil de capa dura"
+          />
+          <p>Representação artística · entrega em PDF digital</p>
+        </div>
+        <div className="productDesireCopy">
+          <p className="eyebrow">Um livro que começa no instante do nascimento</p>
+          <h2 id="product-desire-title">O céu daquela noite transformado em uma história só da sua criança.</h2>
+          <p>Cada página combina a leitura do mapa natal com uma narrativa delicada, visual e fácil de guardar. Não é mais um presente infantil: é uma memória sobre quem essa criança já mostrava ser desde o começo.</p>
+          <div className="desireProof" aria-label="Características do Storybook">
+            <span>Nome e nascimento personalizados</span>
+            <span>Ilustrações em aquarela</span>
+            <span>8 ou 16 páginas</span>
+          </div>
+          <a className="button action" href="#storybooks">Quero criar o livro da minha criança</a>
+        </div>
+      </section>
+
       <section className="section cosmicSteps" id="como">
         <div className="sectionTitle"><p className="eyebrow">Simples para a família. Único para a criança.</p><h2>Do nascimento ao livro em três passos</h2></div>
         <div className="steps">

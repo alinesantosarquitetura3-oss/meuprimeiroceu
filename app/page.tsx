@@ -31,10 +31,7 @@ export default function Home() {
 
       <header className="header">
         <a className="brand" href="#inicio" aria-label="Meu Primeiro Céu — início">
-          <picture>
-            <source media="(max-width:560px)" srcSet="/assets/brand/logo-square.png" />
-            <img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
-          </picture>
+          <img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#como">Como funciona</a><a href="#storybooks">Storybooks</a>
@@ -106,7 +103,7 @@ export default function Home() {
         <details><summary>O prazo de 24 horas vale sempre?</summary><p>Não. É exclusivo da primeira semana de lançamento e sujeito ao limite diário.</p></details>
       </div></section>
 
-      <footer><img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu"/><p>Um roteiro simbólico para reconhecer o universo particular de cada criança.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro Céu.</small></footer>
+      <footer><img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu"/><p>Um roteiro simbólico para reconhecer o universo particular de cada criança.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro Céu.</small></footer>
     </main>
   );
 }

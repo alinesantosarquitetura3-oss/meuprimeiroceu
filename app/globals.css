@@ -34,24 +34,26 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 }
 .openingHero img {
   display: block; width: 100%; height: auto;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,.96) 78%, rgba(0,0,0,.68) 87%, rgba(0,0,0,.18) 96%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,.96) 78%, rgba(0,0,0,.68) 87%, rgba(0,0,0,.18) 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0,0,0,.98) 66%, rgba(0,0,0,.88) 75%, rgba(0,0,0,.58) 85%, rgba(0,0,0,.22) 94%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0,0,0,.98) 66%, rgba(0,0,0,.88) 75%, rgba(0,0,0,.58) 85%, rgba(0,0,0,.22) 94%, transparent 100%);
 }
 .openingHero::after {
-  content: ''; position: absolute; pointer-events: none; inset: auto 0 0; height: 34%;
+  content: ''; position: absolute; pointer-events: none; inset: auto 0 -1px; height: 48%;
   background:
     radial-gradient(circle at 12% 72%, rgba(255,255,255,.62) 0 1px, transparent 2px),
     radial-gradient(circle at 31% 54%, rgba(253,194,43,.65) 0 1.5px, transparent 2.5px),
     radial-gradient(circle at 64% 76%, rgba(100,224,226,.58) 0 1px, transparent 2px),
     radial-gradient(circle at 82% 44%, rgba(255,255,255,.7) 0 1px, transparent 2px),
-    linear-gradient(to bottom, transparent, var(--blue) 88%);
+    linear-gradient(to bottom, transparent 0%, rgba(17,10,49,.14) 18%, rgba(17,10,49,.52) 52%, rgba(17,10,49,.88) 78%, var(--blue) 96%);
   background-size: 92px 76px, 137px 104px, 121px 91px, 163px 118px, 100% 100%;
 }
 
 .hero {
   min-height: 690px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 58px;
   padding: 72px max(40px, calc((100vw - 1180px)/2)) 84px;
+  margin-top: -2px;
   background:
+    linear-gradient(to bottom, var(--blue) 0, var(--blue) 40px, rgba(17,10,49,.72) 130px, transparent 270px),
     radial-gradient(circle at 8% 15%, rgba(100, 224, 226, .16), transparent 27%),
     radial-gradient(circle at 72% 82%, rgba(212, 107, 187, .2), transparent 30%),
     var(--blue);
@@ -217,8 +219,8 @@ footer a { color: var(--aqua); }
   body { font-size: 16px; }
   .openingHero img {
     min-height: 38vh; object-fit: cover; object-position: center top;
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0,0,0,.9) 78%, rgba(0,0,0,.42) 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0,0,0,.9) 78%, rgba(0,0,0,.42) 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 52%, rgba(0,0,0,.94) 64%, rgba(0,0,0,.68) 79%, rgba(0,0,0,.28) 91%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 52%, rgba(0,0,0,.94) 64%, rgba(0,0,0,.68) 79%, rgba(0,0,0,.28) 91%, transparent 100%);
   }
   .hero { padding: 52px 24px 70px; }
   .heroConstellation { min-height: 360px; }

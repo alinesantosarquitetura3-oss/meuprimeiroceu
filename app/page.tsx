@@ -25,6 +25,10 @@ export default function Home() {
 
   return (
     <main>
+      <section className="openingHero" id="inicio" aria-label="Meu Primeiro Céu — O livro do céu da criança">
+        <img src="/assets/media/home-pagina.webp" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
+      </section>
+
       <header className="header">
         <a className="brand" href="#inicio" aria-label="Meu Primeiro Céu — início">
           <picture>
@@ -38,7 +42,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="hero" id="inicio">
+      <section className="hero">
         <div className="heroCopy">
           <p className="eyebrow">Um presente para guardar por toda a vida</p>
           <h1>Antes mesmo de conhecer o mundo, sua criança já tinha um céu só dela.</h1>
@@ -46,10 +50,7 @@ export default function Home() {
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Descobrir como funciona</a></div>
           <ul className="trust"><li>PDF personalizado</li><li>Leitura sem rótulos</li><li>Entrega digital</li></ul>
         </div>
-        <div className="heroArt" aria-label="Prévia artística do Storybook">
-          <img className="heroImage" src="/assets/media/home-pagina.webp" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
-          <p className="caption">Uma viagem em aquarela pelo céu exato do nascimento.</p>
-        </div>
+        <div className="heroConstellation" aria-hidden="true"><span>✦</span><span>☾</span><span>✧</span><span>✦</span></div>
       </section>
 
       <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
@@ -66,7 +67,7 @@ export default function Home() {
       <section className="section meaning">
         <div className="storybookPreview">
           <div className="videoFrame">
-            <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" poster="/assets/media/ceu-de-hugo-poster.jpg" aria-label="Prévia em rolagem do Storybook O Céu de Hugo">
+            <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" poster="/assets/media/ceu-de-hugo-poster.jpg" aria-label="Prévia em rolagem do Storybook O Céu de Hugo" onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.55; }}>
               <source src="/assets/media/ceu-de-hugo-scroll.mp4" type="video/mp4" />
             </video>
             <span className="videoBadge">Exemplo real</span>

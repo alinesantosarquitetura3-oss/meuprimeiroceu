@@ -28,6 +28,9 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .eyebrow { margin: 0 0 14px; color: var(--pink); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .muted { color: rgba(255, 255, 255, .74); }
 
+.openingHero { width: 100%; background: var(--blue); }
+.openingHero img { display: block; width: 100%; height: auto; }
+
 .header {
   width: 100%; min-height: 92px; margin: auto;
   padding: 0 max(40px, calc((100vw - 1180px)/2));
@@ -49,6 +52,20 @@ nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
     var(--blue);
   color: white; overflow: hidden;
 }
+.heroConstellation {
+  min-height: 500px; position: relative; overflow: hidden; border-radius: 48% 52% 45% 55%;
+  background:
+    radial-gradient(circle at 28% 32%, rgba(253, 194, 43, .9) 0 4px, transparent 5px),
+    radial-gradient(circle at 70% 24%, rgba(100, 224, 226, .8) 0 3px, transparent 4px),
+    radial-gradient(circle at 60% 72%, rgba(212, 107, 187, .86) 0 5px, transparent 6px),
+    url('/assets/media/fundo2.jpg') center/cover no-repeat;
+  box-shadow: inset 0 0 90px 42px var(--blue), 0 28px 70px rgba(0, 0, 0, .25);
+}
+.heroConstellation span { position: absolute; color: var(--yellow); text-shadow: 0 0 22px currentColor; }
+.heroConstellation span:nth-child(1) { top: 14%; left: 18%; font-size: 40px; }
+.heroConstellation span:nth-child(2) { top: 35%; right: 18%; color: var(--cream); font-size: 70px; transform: rotate(-18deg); }
+.heroConstellation span:nth-child(3) { bottom: 18%; left: 28%; color: var(--aqua); font-size: 52px; }
+.heroConstellation span:nth-child(4) { bottom: 25%; right: 28%; color: var(--pink); font-size: 30px; }
 .hero .eyebrow { color: var(--aqua); }
 .lead { max-width: 650px; margin: 28px 0 0; color: var(--cream); font-size: 20px; }
 .actions { display: flex; align-items: center; gap: 24px; margin-top: 34px; }
@@ -96,7 +113,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
 .videoFrame {
   position: relative; overflow: hidden; border: 8px solid rgba(255, 255, 255, .92);
   border-radius: 28px; background: var(--blue); box-shadow: 0 28px 70px rgba(0, 0, 0, .4);
-  transform: rotate(-1deg);
+  transform: none;
 }
 .videoFrame video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .videoBadge {
@@ -195,6 +212,7 @@ footer a { color: var(--aqua); }
   .brand img { width: 230px; }
   nav a:not(.navCta) { display: none; }
   .hero { padding: 60px 24px 70px; }
+  .heroConstellation { min-height: 360px; }
   .lead { font-size: 17px; }
   .actions { flex-direction: column; }
   .launch { flex-direction: column; gap: 6px; padding: 18px; }
@@ -214,8 +232,7 @@ footer a { color: var(--aqua); }
   .brand img { width: 60px; height: 60px; object-fit: contain; padding: 6px; }
   .navCta { min-height: 44px; padding: 0 15px; font-size: 14px; }
   h1 { font-size: 50px; }
-  .heroArt { min-height: 280px; padding-bottom: 30px; }
-  .heroImage { border-width: 5px; border-radius: 18px; }
+  .heroConstellation { min-height: 280px; border-radius: 28px; }
   .benefits { grid-template-columns: 1fr; }
   .priceCard { padding: 32px 24px; }
   .videoFrame { border-width: 5px; border-radius: 18px; }

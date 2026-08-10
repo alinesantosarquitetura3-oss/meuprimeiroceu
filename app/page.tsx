@@ -29,13 +29,6 @@ export default function Home() {
         <img src="/assets/media/home-pagina.png" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
       </section>
 
-      <header className="header">
-        <nav aria-label="Navegação principal">
-          <a href="#como">Como funciona</a><a href="#storybooks">Storybooks</a>
-          <a className="navCta" href="#pedido">Criar o livro</a>
-        </nav>
-      </header>
-
       <section className="hero">
         <div className="heroCopy">
           <p className="eyebrow">Um presente para guardar por toda a vida</p>
@@ -56,6 +49,7 @@ export default function Home() {
           <article><b>2</b><h3>Conte onde o céu começou</h3><p>Informe nome, data, horário exato e cidade de nascimento da criança.</p></article>
           <article><b>3</b><h3>Receba uma memória única</h3><p>O livro é criado, revisado e enviado em PDF para o seu e-mail.</p></article>
         </div>
+        <div className="sectionCta"><a className="button action" href="#storybooks">Quero criar esse presente</a></div>
       </section>
 
       <section className="section meaning">
@@ -70,6 +64,7 @@ export default function Home() {
         </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2>Não é um manual sobre quem a criança deve ser.</h2><p className="muted">É um convite para observar com mais delicadeza. O Storybook apresenta potenciais, necessidades emocionais e formas de acolhimento em uma narrativa fácil de compreender — sem determinismo, sem linguagem pesada e sem rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
+          <a className="button action inlineCta" href="#storybooks">Ver os dois Storybooks</a>
         </div>
       </section>
 

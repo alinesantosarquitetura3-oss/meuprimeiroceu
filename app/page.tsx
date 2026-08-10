@@ -47,17 +47,14 @@ export default function Home() {
           <ul className="trust"><li>PDF personalizado</li><li>Leitura sem rótulos</li><li>Entrega digital</li></ul>
         </div>
         <div className="heroArt" aria-label="Prévia artística do Storybook">
-          <div className="book">
-            <div className="page cover"><img src="/assets/brand/logo-square.png" alt="" /><p>O céu de chegada de</p><strong>uma criança única</strong></div>
-            <div className="page inside"><small>Uma viagem pelo céu</small><h2>Pequenas estrelas, grandes descobertas</h2><div className="planet"><span /></div><p>Um roteiro simbólico para compreender jeitos, afetos e potenciais.</p></div>
-          </div>
-          <p className="caption">Cada página nasce do céu exato do nascimento.</p>
+          <img className="heroImage" src="/assets/media/home-pagina.webp" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
+          <p className="caption">Uma viagem em aquarela pelo céu exato do nascimento.</p>
         </div>
       </section>
 
       <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
 
-      <section className="section" id="como">
+      <section className="section cosmicSteps" id="como">
         <div className="sectionTitle"><p className="eyebrow">Simples para a família. Único para a criança.</p><h2>Do nascimento ao livro em três passos</h2></div>
         <div className="steps">
           <article><b>1</b><h3>Escolha o Storybook</h3><p>Selecione a versão de 8 ou 16 páginas conforme a profundidade que deseja.</p></article>
@@ -67,7 +64,15 @@ export default function Home() {
       </section>
 
       <section className="section meaning">
-        <div className="cosmic" aria-hidden="true"><span className="moon"/><span className="softPlanet"/><p>Um céu que vira história.</p></div>
+        <div className="storybookPreview">
+          <div className="videoFrame">
+            <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" poster="/assets/media/ceu-de-hugo-poster.jpg" aria-label="Prévia em rolagem do Storybook O Céu de Hugo">
+              <source src="/assets/media/ceu-de-hugo-scroll.mp4" type="video/mp4" />
+            </video>
+            <span className="videoBadge">Exemplo real</span>
+          </div>
+          <p><strong>O Céu de Hugo</strong><span>Veja como o livro percorre personalidade, emoções, talentos e formas de acolher.</span></p>
+        </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2>Não é um manual sobre quem a criança deve ser.</h2><p className="muted">É um convite para observar com mais delicadeza. O Storybook apresenta potenciais, necessidades emocionais e formas de acolhimento em uma narrativa fácil de compreender — sem determinismo, sem linguagem pesada e sem rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
         </div>

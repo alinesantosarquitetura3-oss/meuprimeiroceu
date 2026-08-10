@@ -26,13 +26,10 @@ export default function Home() {
   return (
     <main>
       <section className="openingHero" id="inicio" aria-label="Meu Primeiro Céu — O livro do céu da criança">
-        <img src="/assets/media/home-pagina.webp" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
+        <img src="/assets/media/home-pagina.png" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
       </section>
 
       <header className="header">
-        <a className="brand" href="#inicio" aria-label="Meu Primeiro Céu — início">
-          <img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
-        </a>
         <nav aria-label="Navegação principal">
           <a href="#como">Como funciona</a><a href="#storybooks">Storybooks</a>
           <a className="navCta" href="#pedido">Criar o livro</a>

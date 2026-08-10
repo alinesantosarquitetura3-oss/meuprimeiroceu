@@ -49,8 +49,8 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 }
 
 .hero {
-  min-height: 690px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 58px;
-  padding: 72px max(40px, calc((100vw - 1180px)/2)) 84px;
+  position: relative; min-height: 650px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 58px;
+  padding: 58px max(40px, calc((100vw - 1180px)/2)) 66px;
   margin-top: -2px;
   background:
     linear-gradient(to bottom, var(--blue) 0, var(--blue) 40px, rgba(17,10,49,.72) 130px, transparent 270px),
@@ -98,7 +98,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 
 .productDesire {
   position: relative; isolation: isolate; width: min(1180px, calc(100% - 40px)); margin: 0 auto;
-  display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 74px; padding: 96px 0 76px;
+  display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 64px; padding: 70px 0 56px;
 }
 .productDesire::before {
   content: ''; position: absolute; z-index: -1; inset: 24px -120px 0;
@@ -114,7 +114,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 }
 .productMockup img {
   display: block; width: min(590px, 100%); height: auto; margin: auto;
-  border-radius: 38px; box-shadow: 0 36px 80px rgba(0, 0, 0, .32);
+  filter: drop-shadow(0 30px 38px rgba(0, 0, 0, .34));
   transform: rotate(-1deg); transition: transform .28s ease;
 }
 .productMockup:hover img { transform: rotate(0) translateY(-5px); }
@@ -127,8 +127,8 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .desireProof { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 32px; }
 .desireProof span { padding: 8px 13px; border: 1px solid rgba(100, 224, 226, .42); border-radius: 99px; color: var(--light); font-size: 13px; }
 
-.section { position: relative; width: min(1180px, calc(100% - 40px)); margin: auto; padding: 108px 0; }
-.sectionTitle { position: relative; z-index: 1; max-width: 780px; margin: 0 auto 56px; text-align: center; }
+.section { position: relative; width: min(1180px, calc(100% - 40px)); margin: auto; padding: 76px 0; }
+.sectionTitle { position: relative; z-index: 1; max-width: 780px; margin: 0 auto 42px; text-align: center; }
 .sectionTitle > p:last-child { color: rgba(255, 255, 255, .72); }
 .cosmicSteps::before {
   content: ''; position: absolute; z-index: 0; inset: 24px -120px; border-radius: 50px;
@@ -145,7 +145,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .steps p { margin: 0; color: rgba(17, 10, 49, .72); font-size: 16px; }
 .sectionCta { position: relative; z-index: 1; display: flex; justify-content: center; margin-top: 38px; }
 
-.meaning { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 74px; }
+.meaning { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 66px; }
 .storybookPreview { min-width: 0; }
 .laptop { position: relative; width: 100%; padding-bottom: 7%; filter: drop-shadow(0 30px 32px rgba(0, 0, 0, .42)); }
 .laptopScreen { position: relative; padding: 18px 18px 20px; border: 2px solid #667083; border-radius: 22px 22px 8px 8px; background: linear-gradient(145deg, #202631, #06080d); }
@@ -170,7 +170,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .inlineCta { margin-top: 30px; }
 
 .pricing {
-  padding: 108px max(40px, calc((100vw - 1180px)/2));
+  position: relative; overflow: hidden; padding: 82px max(40px, calc((100vw - 1180px)/2));
   background: linear-gradient(rgba(17, 10, 49, .82), rgba(17, 10, 49, .95)), url('/assets/media/fundo2.jpg') center 58%/cover no-repeat;
   color: white;
 }
@@ -194,7 +194,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 
 .order {
   display: grid; grid-template-columns: .82fr 1.18fr; gap: 72px; align-items: start;
-  margin-top: 76px; margin-bottom: 76px; padding: 70px 56px;
+  margin-top: 48px; margin-bottom: 48px; padding: 60px 56px;
   border-radius: 42px; background: var(--paper); color: var(--blue);
 }
 .order .muted { color: rgba(17, 10, 49, .7); }
@@ -225,6 +225,19 @@ input:focus { outline: 0; border-color: var(--aqua); box-shadow: 0 0 0 2px var(-
 .review p { margin: 4px 0 0; font-size: 14px; }
 
 .faq { max-width: 880px; }
+
+.cosmicSymbol {
+  position: absolute; z-index: 2; display: block; width: 110px; height: auto;
+  pointer-events: none; user-select: none; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .2));
+}
+.heroStar { width: 54px; right: 3.5%; top: 9%; transform: rotate(12deg); }
+.desirePlanet { z-index: -1; width: 142px; right: -86px; top: 8%; opacity: .78; transform: rotate(11deg); }
+.desireMoon { width: 58px; left: 48%; bottom: 3%; transform: rotate(-12deg); }
+.stepsHouse { width: 82px; right: -30px; top: 30px; transform: rotate(7deg); }
+.meaningTelescope { width: 94px; right: -44px; bottom: 18px; opacity: .9; }
+.pricingPlanet { width: 128px; left: -34px; top: 42px; opacity: .78; transform: rotate(-9deg); }
+.orderMoon { width: 66px; right: 28px; top: -28px; transform: rotate(8deg); }
+.faqStar { width: 52px; left: -74px; top: 62px; transform: rotate(-8deg); }
 .faqList { border-top: 1px solid rgba(255, 255, 255, .3); }
 details { border-bottom: 1px solid rgba(255, 255, 255, .3); }
 summary { min-height: 68px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-weight: 700; list-style: none; }
@@ -262,20 +275,28 @@ footer a { color: var(--aqua); }
   .lead { font-size: 17px; }
   .actions { flex-direction: column; }
   .launch { flex-direction: column; gap: 6px; padding: 18px; }
-  .productDesire { padding: 72px 0 52px; }
+  .productDesire { padding: 58px 0 44px; }
   .productMockup { width: min(620px, 100%); margin: auto; }
-  .productMockup img { border-radius: 26px; }
   .productDesireCopy > p:not(.eyebrow) { font-size: 17px; }
-  .section { padding: 80px 0; }
+  .section { padding: 62px 0; }
   .cosmicSteps::before { inset: 16px -20px; background-size: auto 100%; }
   .steps, .priceGrid { grid-template-columns: 1fr; }
   .featured { transform: none !important; }
-  .meaning { gap: 48px; }
+  .meaning { gap: 40px; }
   .pricing { padding-left: 20px; padding-right: 20px; }
-  .order { gap: 40px; margin-top: 42px; margin-bottom: 42px; padding: 48px 28px; }
+  .order { gap: 36px; margin-top: 30px; margin-bottom: 30px; padding: 44px 28px; }
   form { padding: 28px 22px; }
   .picker, .fields { grid-template-columns: 1fr; }
   .fields .full { grid-column: auto; }
+  .cosmicSymbol { transform: none; }
+  .heroStar { width: 38px; right: 12px; top: 16px; }
+  .desirePlanet { width: 92px; right: -42px; top: 3%; opacity: .62; }
+  .desireMoon { width: 44px; left: 8px; bottom: 46%; }
+  .stepsHouse { width: 60px; right: -8px; top: 20px; }
+  .meaningTelescope { width: 68px; right: -12px; bottom: 2px; opacity: .72; }
+  .pricingPlanet { width: 84px; left: -28px; top: 30px; opacity: .58; }
+  .orderMoon { width: 48px; right: 18px; top: -22px; }
+  .faqStar { width: 40px; left: -6px; top: 18px; }
 }
 
 @media (max-width: 560px) {

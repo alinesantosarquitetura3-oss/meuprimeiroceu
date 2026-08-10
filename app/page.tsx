@@ -30,6 +30,7 @@ export default function Home() {
       </section>
 
       <section className="hero">
+        <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
           <p className="eyebrow">Um presente para guardar por toda a vida</p>
           <h1>Antes mesmo de conhecer o mundo, sua criança já tinha um céu só dela.</h1>
@@ -64,11 +65,13 @@ export default function Home() {
       <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
 
       <section className="productDesire" aria-labelledby="product-desire-title">
+        <img className="cosmicSymbol desirePlanet" src="/assets/decor/simb1-transparent.png" alt="" aria-hidden="true" />
+        <img className="cosmicSymbol desireMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
         <div className="productMockup">
           <span className="mockupSpark mockupSparkOne" aria-hidden="true">✦</span>
           <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
           <img
-            src="/assets/media/mockup-livro-breno.webp"
+            src="/assets/media/mockup-livro-breno-transparent.png"
             alt="Representação de O Céu de Breno como um livro infantil de capa dura"
           />
           <p>Representação artística · entrega em PDF digital</p>
@@ -87,6 +90,7 @@ export default function Home() {
       </section>
 
       <section className="section cosmicSteps" id="como">
+        <img className="cosmicSymbol stepsHouse" src="/assets/decor/simb5-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Simples para a família. Único para a criança.</p><h2>Do nascimento ao livro em três passos</h2></div>
         <div className="steps">
           <article><b>1</b><h3>Escolha o Storybook</h3><p>Selecione a versão de 8 ou 16 páginas conforme a profundidade que deseja.</p></article>
@@ -97,6 +101,7 @@ export default function Home() {
       </section>
 
       <section className="section meaning">
+        <img className="cosmicSymbol meaningTelescope" src="/assets/decor/simb3-transparent.png" alt="" aria-hidden="true" />
         <div className="storybookPreview">
           <div className="laptop" aria-label="Mockup de laptop exibindo o Storybook O Céu de Breno">
             <div className="laptopScreen">
@@ -119,6 +124,7 @@ export default function Home() {
       </section>
 
       <section className="pricing" id="storybooks">
+        <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da viagem</p><h2>Dois Storybooks. O mesmo céu inesquecível.</h2><p>O Completo tem o dobro de páginas e aprofunda a leitura para a família.</p></div>
         <div className="priceGrid">
           <article className="priceCard"><p className="label">Retrato essencial</p><h3>Storybook Resumido</h3><p>8 páginas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional da criança</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("resumido")}>Quero o Resumido</button></article>
@@ -127,6 +133,7 @@ export default function Home() {
       </section>
 
       <section className="section order" id="pedido">
+        <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
         <div className="orderIntro"><p className="eyebrow">Comece a criar</p><h2>Conte onde essa história começou</h2><p className="muted">Informe o horário local registrado no nascimento. Você não precisa calcular fuso ou horário de verão.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
         <form onSubmit={submit}>
           <fieldset className="picker"><legend>1. Escolha a versão</legend>{(Object.keys(plans) as Plan[]).map(key => <label key={key} className={plan===key?"picked":""}><input type="radio" name="plano" checked={plan===key} onChange={()=>setPlan(key)}/><span><strong>{plans[key].name}</strong><small>{plans[key].pages} · {plans[key].price}</small></span></label>)}</fieldset>
@@ -137,7 +144,7 @@ export default function Home() {
         </form>
       </section>
 
-      <section className="section faq"><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
+      <section className="section faq"><img className="cosmicSymbol faqStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" /><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
         <details><summary>Preciso entender de astrologia?</summary><p>Não. O texto é feito para famílias leigas, com linguagem leve e sem excesso de termos técnicos.</p></details>
         <details><summary>Posso comprar para uma criança nascida fora do Brasil?</summary><p>Sim. Informe o horário local, cidade, estado ou província e país do nascimento.</p></details>
         <details><summary>E se eu não souber o horário exato?</summary><p>O horário é indispensável nesta primeira versão. Consulte a certidão antes de comprar.</p></details>

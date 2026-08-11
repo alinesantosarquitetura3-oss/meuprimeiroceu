@@ -23,8 +23,8 @@ body { margin: 0; overflow-x: clip; background: var(--blue); color: white; font:
 button, input { font: inherit; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--aqua); outline-offset: 4px; }
-h1, h2 { margin: 0; font-family: "Fraunces Variable", Georgia, serif; font-size: clamp(42px, 5vw, 70px); font-weight: 610; line-height: 1.04; letter-spacing: -.025em; text-wrap: pretty; }
-h1 { font-size: clamp(58px, 6.2vw, 92px); }
+h1, h2 { margin: 0; font-family: "Fraunces Variable", Georgia, serif; font-size: clamp(38px, 4.4vw, 62px); font-weight: 610; line-height: 1.06; letter-spacing: -.025em; text-wrap: pretty; }
+h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .titleSky { color: #FFD21A; }
 .eyebrow { margin: 0 0 14px; color: var(--pink); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .muted { color: rgba(255, 255, 255, .74); }
@@ -85,7 +85,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .fitNo { background: linear-gradient(145deg, #f9f4ff, #e6ddf6); border: 2px solid rgba(173, 103, 243, .55); }
 .fitIcon { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 50%; background: var(--blue); color: var(--yellow); font-size: 23px; }
 .fitNo .fitIcon { color: var(--cream); }
-.fitTable h2 { margin: 0 0 18px; font-family: "Fraunces Variable", Georgia, serif; font-size: 31px; font-weight: 650; line-height: 1.08; }
+.fitTable h2 { margin: 0 0 18px; font-family: "Fraunces Variable", Georgia, serif; font-size: 28px; font-weight: 650; line-height: 1.1; }
 .fitTable ul { margin: 0; padding: 0; list-style: none; }
 .fitTable li { position: relative; padding: 11px 0 11px 26px; border-top: 1px solid rgba(17, 10, 49, .11); font-size: 14px; line-height: 1.42; }
 .fitTable li::before { content: '✦'; position: absolute; left: 0; color: var(--pink); }
@@ -182,7 +182,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
   text-transform: uppercase; letter-spacing: .08em;
 }
 .storybookPreview > p { display: grid; gap: 2px; margin: 22px 10px 0; }
-.storybookPreview > p strong { font-family: "Fraunces Variable", Georgia, serif; font-size: 34px; font-weight: 620; line-height: 1; color: var(--yellow); }
+.storybookPreview > p strong { font-family: "Fraunces Variable", Georgia, serif; font-size: 30px; font-weight: 620; line-height: 1; color: var(--yellow); }
 .storybookPreview > p span { color: var(--light); font-size: 14px; }
 .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
 .benefits div { padding: 17px; border-left: 4px solid var(--pink); background: rgba(255, 255, 255, .96); color: var(--blue); }
@@ -206,7 +206,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
   background: var(--yellow); color: var(--blue); font-size: 12px; text-transform: uppercase; letter-spacing: .07em;
 }
 .label { margin: 0; color: var(--pink); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.priceCard h3 { margin: 8px 0 0; font-size: 28px; }
+.priceCard h3 { margin: 8px 0 0; font-size: 25px; }
 .priceCard > p:not(.label) { margin: 4px 0 18px; }
 .price { display: block; font-family: "Fraunces Variable", Georgia, serif; font-size: 52px; font-weight: 650; line-height: 1; }
 .priceCard small { color: rgba(17, 10, 49, .62); }
@@ -349,8 +349,8 @@ footer a { color: var(--aqua); }
 }
 
 @media (max-width: 560px) {
-  h1 { font-size: clamp(36px, 10.45vw, 44px); line-height: 1.02; }
-  h2 { font-size: clamp(40px, 11.4vw, 66px); }
+  h1 { font-size: clamp(32px, 9vw, 38px); line-height: 1.05; }
+  h2 { font-size: clamp(33px, 9.2vw, 43px); line-height: 1.07; }
   .heroCopy { text-align: center; }
   .heroCopy .eyebrow { max-width: 320px; margin-left: auto; margin-right: auto; }
   .lead { margin-top: 20px; }
@@ -359,14 +359,14 @@ footer a { color: var(--aqua); }
   .trust { justify-content: center; gap: 10px 16px; margin-top: 22px; }
   .fitTable { grid-template-columns: 1fr; }
   .fitTable article { padding: 28px 24px; }
-  .fitTable h2 { font-size: 32px; }
+  .fitTable h2 { font-size: 27px; }
   .fitTable li { font-size: 15.4px; line-height: 1.46; }
   .benefits { grid-template-columns: 1fr; }
   .priceCard { padding: 32px 24px; }
   .laptopScreen { padding: 10px 10px 12px; border-radius: 14px 14px 6px 6px; }
   .storybookPreview > p { margin-left: 0; }
   .order { width: calc(100% - 20px); padding: 38px 16px; }
-  .orderTitle { font-size: clamp(38px, 10.6vw, 48px); letter-spacing: -.035em; }
+  .orderTitle { font-size: clamp(32px, 9vw, 39px); letter-spacing: -.035em; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -62,7 +62,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .introFilm video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 19px; background: #080516; }
 
 .hero {
-  position: relative; min-height: 650px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 58px;
+  position: relative; min-height: 650px; display: grid; grid-template-columns: 1fr; align-items: center; gap: 46px;
   padding: 58px max(40px, calc((100vw - 1180px)/2)) 66px;
   margin-top: -2px;
   background:
@@ -72,6 +72,11 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
     var(--blue);
   color: white; overflow: hidden;
 }
+.heroCopy { width: min(100%, 980px); margin: 0 auto; text-align: center; }
+.heroCopy .lead { margin-left: auto; margin-right: auto; }
+.heroCopy .actions, .heroCopy .trust { justify-content: center; }
+.heroCopy .introFilm { width: min(100%, 900px); margin-left: auto; margin-right: auto; }
+.fitTable { width: min(100%, 980px); margin: 0 auto; }
 .fitTable { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
 .fitTable article { position: relative; overflow: hidden; padding: 34px 30px; border-radius: 28px; color: var(--blue); box-shadow: 0 22px 55px rgba(0, 0, 0, .25); }
 .fitTable article::after { content: ''; position: absolute; inset: auto -35px -42px auto; width: 130px; height: 130px; border-radius: 50%; background: currentColor; opacity: .055; }
@@ -316,12 +321,12 @@ footer a { color: var(--aqua); }
 
 @media (max-width: 560px) {
   h1 { font-size: clamp(38px, 11vw, 46px); line-height: 1.02; }
-  .heroCopy { text-align: left; }
-  .heroCopy .eyebrow { max-width: 290px; }
+  .heroCopy { text-align: center; }
+  .heroCopy .eyebrow { max-width: 320px; margin-left: auto; margin-right: auto; }
   .lead { margin-top: 20px; }
   .actions { align-items: stretch; gap: 16px; margin-top: 20px; text-align: center; }
   .actions .button { width: 100%; }
-  .trust { justify-content: flex-start; gap: 10px 16px; margin-top: 22px; }
+  .trust { justify-content: center; gap: 10px 16px; margin-top: 22px; }
   .fitTable { grid-template-columns: 1fr; }
   .fitTable article { padding: 28px 24px; }
   .fitTable h2 { font-size: 32px; }

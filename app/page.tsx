@@ -185,7 +185,7 @@ export default function Home() {
         <details><summary>O prazo de 24 horas vale sempre?</summary><p>Não. É exclusivo da primeira semana de lançamento e sujeito ao limite diário.</p></details>
       </div></section>
 
-      <footer><img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu"/><p>Um roteiro simbólico para reconhecer o universo particular do seu filho, do bebê ao adolescente.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro <span className="titleSky">Céu</span>.</small></footer>
+      <footer><img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu"/><p>Um roteiro simbólico para reconhecer o universo astrológico do seu filho, do bebê ao adolescente.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro <span className="titleSky">Céu</span>.</small></footer>
     </main>
   );
 }

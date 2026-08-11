@@ -124,6 +124,10 @@ export default function Home() {
       <section className="pricing" id="storybooks">
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da viagem</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> inesquecível.</h2><p>O Completo tem o dobro de páginas e aprofunda a leitura para a família.</p></div>
+        <div className="priceGrid">
+          <article className="priceCard"><p className="label">Retrato essencial</p><h3>Storybook Resumido</h3><p>8 páginas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional do seu filho</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("resumido")}>Quero o Resumido</button></article>
+          <article className="priceCard featured"><span className="popular">Mais completo</span><p className="label">Guia para acompanhar o crescimento</p><h3>Storybook Completo</h3><p>16 páginas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Storybook Resumido</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado para bebê, criança ou adolescente</li></ul><button className="button action" onClick={() => choose("completo")}>Quero o Completo</button></article>
+        </div>
         <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
           <article className="noticeCritical">
             <span className="noticeIcon" aria-hidden="true">!</span>
@@ -133,10 +137,6 @@ export default function Home() {
             <span className="noticeIcon" aria-hidden="true">✦</span>
             <div><h3>Cada Storybook possui uma arte única</h3><p>As imagens desta página são ilustrativas. Personagens, elementos celestes, enquadramentos e composições poderão variar, mas serão sempre preservados o <strong>estilo aquarelado</strong>, a <strong>atmosfera celestial</strong> e a <strong>paleta de cores da opção escolhida</strong>.</p></div>
           </article>
-        </div>
-        <div className="priceGrid">
-          <article className="priceCard"><p className="label">Retrato essencial</p><h3>Storybook Resumido</h3><p>8 páginas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional do seu filho</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("resumido")}>Quero o Resumido</button></article>
-          <article className="priceCard featured"><span className="popular">Mais completo</span><p className="label">Guia para acompanhar o crescimento</p><h3>Storybook Completo</h3><p>16 páginas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Storybook Resumido</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado para bebê, criança ou adolescente</li></ul><button className="button action" onClick={() => choose("completo")}>Quero o Completo</button></article>
         </div>
       </section>
 

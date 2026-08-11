@@ -213,7 +213,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .priceCard ul { flex: 1; margin: 28px 0; padding: 0; list-style: none; }
 .priceCard li { padding: 8px 0; font-size: 15px; }
 
-.purchaseNotices { position: relative; z-index: 1; width: min(980px, 100%); margin: 0 auto 50px; display: grid; gap: 16px; }
+.purchaseNotices { position: relative; z-index: 1; width: min(980px, 100%); margin: 44px auto 0; display: grid; gap: 16px; }
 .purchaseNotices article { display: flex; align-items: flex-start; gap: 18px; padding: 24px 26px; border: 1px solid rgba(255,255,255,.32); border-radius: 22px; background: rgba(17,10,49,.86); backdrop-filter: blur(8px); }
 .purchaseNotices article.noticeCritical { border: 2px solid var(--yellow); background: rgba(253,194,43,.13); }
 .noticeIcon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--blue); font-weight: 800; }

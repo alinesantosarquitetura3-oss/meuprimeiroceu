@@ -6,6 +6,7 @@
 
 :root {
   --blue: #110A31;
+  --logo-background-dark: #09051D;
   --midblue: #293E7D;
   --light: #D0D8E9;
   --yellow: #FDC22B;
@@ -304,7 +305,7 @@ summary::-webkit-details-marker { display: none; }
 summary::after { content: '+'; color: var(--pink); font-size: 28px; }
 details[open] summary::after { content: '−'; }
 details p { margin: 0 0 24px; color: rgba(255, 255, 255, .72); }
-footer { display: grid; justify-items: center; gap: 18px; padding: 62px 24px; background: #09051d; color: var(--light); text-align: center; }
+footer { display: grid; justify-items: center; gap: 18px; padding: 62px 24px; background: var(--logo-background-dark); color: var(--light); text-align: center; }
 footer img { width: min(430px, 90vw); height: auto; }
 footer p { margin: 0; }
 footer a { color: var(--aqua); }

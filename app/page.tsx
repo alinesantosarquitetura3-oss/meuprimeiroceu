@@ -33,7 +33,7 @@ export default function Home() {
         <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
           <p className="eyebrow">Um presente para guardar por toda a vida</p>
-          <h1>Antes mesmo de conhecer o mundo, sua criança já tinha um céu só dela.</h1>
+          <h1>Antes mesmo de conhecer o mundo, sua criança já tinha um <span className="titleSky">céu</span> só dela.</h1>
           <p className="lead">Transformamos o mapa astral do nascimento em um storybook personalizado, leve e lúdico — uma viagem em aquarela pelo universo particular da criança.</p>
           <div className="introFilm" aria-label="Uma primeira viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="launch"><p><strong>Semana de lançamento:</strong> receba seu Storybook em até 24 horas.</p><span>Vagas diárias limitadas</span></div>
+      <div className="launch"><p><strong>Semana de lançamento</strong><span className="launchPromise">Receba seu Storybook em até 24 horas.</span></p><span>Vagas diárias limitadas</span></div>
 
       <section className="productDesire" aria-labelledby="product-desire-title">
         <img className="cosmicSymbol desirePlanet" src="/assets/decor/simb1-transparent.png" alt="" aria-hidden="true" />
@@ -96,7 +96,7 @@ export default function Home() {
       </section>
 
       <section className="section cosmicSteps" id="como">
-        <img className="cosmicSymbol stepsHouse" src="/assets/decor/simb5-transparent.png" alt="" aria-hidden="true" />
+        <img className="cosmicSymbol stepsPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Simples para a família. Único para a criança.</p><h2>Do nascimento ao livro em três passos</h2></div>
         <div className="steps">
           <article><b>1</b><h3>Escolha o Storybook</h3><p>Selecione a versão de 8 ou 16 páginas conforme a profundidade que deseja.</p></article>

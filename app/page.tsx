@@ -29,19 +29,18 @@ export default function Home() {
         <img src="/assets/media/home-pagina.png" alt="Meu Primeiro Céu — O livro do céu da criança, em universo celestial de aquarela" />
       </section>
 
-      <section className="introFilm" aria-label="Uma primeira viagem pelas páginas do Storybook">
-        <div className="introFilmGlow" aria-hidden="true" />
-        <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" aria-label="Vídeo apresentando as páginas de O Céu de Breno">
-          <source src="/assets/media/video-primeira-dobra-breno.mp4" type="video/mp4" />
-        </video>
-      </section>
-
       <section className="hero">
         <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
           <p className="eyebrow">Um presente para guardar por toda a vida</p>
           <h1>Antes mesmo de conhecer o mundo, sua criança já tinha um céu só dela.</h1>
           <p className="lead">Transformamos o mapa astral do nascimento em um storybook personalizado, leve e lúdico — uma viagem em aquarela pelo universo particular da criança.</p>
+          <div className="introFilm" aria-label="Uma primeira viagem pelas páginas do Storybook">
+            <div className="introFilmGlow" aria-hidden="true" />
+            <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" aria-label="Vídeo apresentando as páginas de O Céu de Breno">
+              <source src="/assets/media/video-primeira-dobra-breno.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Descobrir como funciona</a></div>
           <ul className="trust"><li>PDF personalizado</li><li>Leitura sem rótulos</li><li>Entrega digital</li></ul>
         </div>

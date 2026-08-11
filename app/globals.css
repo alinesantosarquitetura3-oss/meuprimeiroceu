@@ -23,7 +23,7 @@ body { margin: 0; overflow-x: clip; background: var(--blue); color: white; font:
 button, input { font: inherit; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--aqua); outline-offset: 4px; }
-h1, h2 { margin: 0; font: 400 clamp(48px, 5.5vw, 76px)/1 Freehand, cursive; text-wrap: pretty; }
+h1, h2 { margin: 0; font-family: "Fraunces Variable", Georgia, serif; font-size: clamp(42px, 5vw, 70px); font-weight: 610; line-height: 1.04; letter-spacing: -.025em; text-wrap: pretty; }
 h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .eyebrow { margin: 0 0 14px; color: var(--pink); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .muted { color: rgba(255, 255, 255, .74); }
@@ -48,6 +48,19 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
   background-size: 92px 76px, 137px 104px, 121px 91px, 163px 118px, 100% 100%;
 }
 
+.introFilm {
+  position: relative; isolation: isolate; width: min(1120px, calc(100% - 40px));
+  margin: 12px auto 46px; padding: 14px; border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 30px; background: rgba(255, 255, 255, .055);
+  box-shadow: 0 32px 78px rgba(0, 0, 0, .32); overflow: hidden;
+}
+.introFilmGlow {
+  position: absolute; z-index: -1; inset: -35%;
+  background: radial-gradient(circle at 20% 38%, rgba(100, 224, 226, .2), transparent 32%), radial-gradient(circle at 82% 58%, rgba(212, 107, 187, .22), transparent 34%);
+  filter: blur(30px);
+}
+.introFilm video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 19px; background: #080516; }
+
 .hero {
   position: relative; min-height: 650px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 58px;
   padding: 58px max(40px, calc((100vw - 1180px)/2)) 66px;
@@ -66,7 +79,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .fitNo { background: linear-gradient(145deg, #f9f4ff, #e6ddf6); border: 2px solid rgba(173, 103, 243, .55); }
 .fitIcon { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 50%; background: var(--blue); color: var(--yellow); font-size: 23px; }
 .fitNo .fitIcon { color: var(--cream); }
-.fitTable h2 { margin: 0 0 18px; font: 400 34px/1.05 Freehand, cursive; }
+.fitTable h2 { margin: 0 0 18px; font-family: "Fraunces Variable", Georgia, serif; font-size: 31px; font-weight: 650; line-height: 1.08; }
 .fitTable ul { margin: 0; padding: 0; list-style: none; }
 .fitTable li { position: relative; padding: 11px 0 11px 26px; border-top: 1px solid rgba(17, 10, 49, .11); font-size: 14px; line-height: 1.42; }
 .fitTable li::before { content: '✦'; position: absolute; left: 0; color: var(--pink); }
@@ -161,7 +174,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
   text-transform: uppercase; letter-spacing: .08em;
 }
 .storybookPreview > p { display: grid; gap: 2px; margin: 22px 10px 0; }
-.storybookPreview > p strong { font: 400 36px/1 Freehand; color: var(--yellow); }
+.storybookPreview > p strong { font-family: "Fraunces Variable", Georgia, serif; font-size: 34px; font-weight: 620; line-height: 1; color: var(--yellow); }
 .storybookPreview > p span { color: var(--light); font-size: 14px; }
 .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
 .benefits div { padding: 17px; border-left: 4px solid var(--pink); background: rgba(255, 255, 255, .96); color: var(--blue); }
@@ -187,7 +200,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .label { margin: 0; color: var(--pink); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .priceCard h3 { margin: 8px 0 0; font-size: 28px; }
 .priceCard > p:not(.label) { margin: 4px 0 18px; }
-.price { display: block; font: 400 54px/1 Freehand; }
+.price { display: block; font-family: "Fraunces Variable", Georgia, serif; font-size: 52px; font-weight: 650; line-height: 1; }
 .priceCard small { color: rgba(17, 10, 49, .62); }
 .priceCard ul { flex: 1; margin: 28px 0; padding: 0; list-style: none; }
 .priceCard li { padding: 8px 0; font-size: 15px; }
@@ -271,6 +284,8 @@ footer a { color: var(--aqua); }
     mask-image: linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,.94) 75%, rgba(0,0,0,.72) 84%, rgba(0,0,0,.34) 93%, transparent 100%);
   }
   .hero { padding: 52px 24px 70px; }
+  .introFilm { width: calc(100% - 24px); margin-top: 4px; margin-bottom: 28px; padding: 7px; border-radius: 19px; }
+  .introFilm video { border-radius: 13px; }
   .fitTable { grid-template-columns: 1fr 1fr; }
   .lead { font-size: 17px; }
   .actions { flex-direction: column; }

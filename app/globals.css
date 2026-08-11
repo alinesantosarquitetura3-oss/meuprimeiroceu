@@ -161,7 +161,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
   padding: 34px; border: 1px solid rgba(255, 255, 255, .35); border-radius: 26px;
   background: rgba(255, 255, 255, .96); color: var(--blue); box-shadow: 0 16px 38px rgba(0, 0, 0, .2);
 }
-.steps b { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--cream); }
+.steps b { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--blue); box-shadow: 0 8px 18px rgba(253, 194, 43, .32); }
 .steps h3 { margin: 22px 0 8px; }
 .steps p { margin: 0; color: rgba(17, 10, 49, .72); font-size: 16px; }
 .sectionCta { position: relative; z-index: 1; display: flex; justify-content: center; margin-top: 38px; }
@@ -216,14 +216,15 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .testimonials { padding-top: 70px; padding-bottom: 34px; }
 .testimonials .sectionTitle { max-width: 850px; }
 .testimonialGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.testimonialPlaceholder {
-  min-height: 210px; display: flex; flex-direction: column; justify-content: center;
-  padding: 30px; border: 1px dashed rgba(253, 194, 43, .65); border-radius: 26px;
-  background: rgba(255, 255, 255, .055); text-align: center;
+.transformationCard {
+  min-height: 270px; display: flex; flex-direction: column;
+  padding: 32px; border: 1px solid rgba(253, 194, 43, .55); border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .035));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .14);
 }
-.testimonialPlaceholder > span { color: var(--yellow); font-family: Georgia, serif; font-size: 66px; line-height: .65; }
-.testimonialPlaceholder p { margin: 20px 0 5px; color: var(--cream); font-weight: 700; }
-.testimonialPlaceholder small { color: rgba(255, 255, 255, .55); font-size: 12px; }
+.transformationCard > span { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--blue); font-size: 20px; }
+.transformationCard h3 { margin: 24px 0 12px; color: var(--cream); font-family: "Fraunces Variable", Georgia, serif; font-size: 25px; line-height: 1.12; }
+.transformationCard p { margin: 0; color: rgba(255, 255, 255, .72); font-size: 15px; line-height: 1.55; }
 .testimonialsStar { width: 46px; right: 2%; top: 80px; opacity: .75; }
 
 .order {

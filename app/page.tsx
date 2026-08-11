@@ -141,18 +141,26 @@ export default function Home() {
       <section className="section testimonials" aria-labelledby="testimonials-title">
         <img className="cosmicSymbol testimonialsStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle">
-          <p className="eyebrow">Quem já recebeu um céu só seu</p>
-          <h2 id="testimonials-title">Histórias de quem já viveu essa experiência</h2>
-          <p>Este espaço receberá depoimentos reais de famílias que compraram o Meu Primeiro Céu.</p>
+          <p className="eyebrow">Muito além de uma lembrança bonita</p>
+          <h2 id="testimonials-title">O que este livro pode transformar</h2>
+          <p>Um novo jeito de observar, compreender e guardar a história única da sua criança.</p>
         </div>
         <div className="testimonialGrid">
-          {[1, 2, 3].map((item) => (
-            <article className="testimonialPlaceholder" key={item}>
-              <span aria-hidden="true">“</span>
-              <p>Depoimento de cliente</p>
-              <small>Texto e identificação serão adicionados após autorização.</small>
-            </article>
-          ))}
+          <article className="transformationCard">
+            <span aria-hidden="true">✦</span>
+            <h3>Mais clareza para compreender a criança</h3>
+            <p>Reconheça características, necessidades emocionais e formas particulares de expressão que nem sempre aparecem nas conversas do dia a dia.</p>
+          </article>
+          <article className="transformationCard">
+            <span aria-hidden="true">☾</span>
+            <h3>Um novo olhar sobre comportamentos desafiadores</h3>
+            <p>Descubra o que pode existir por trás de determinadas reações, respeitando a individualidade da criança sem tentar encaixá-la em padrões.</p>
+          </article>
+          <article className="transformationCard">
+            <span aria-hidden="true">★</span>
+            <h3>Uma lembrança afetiva para toda a vida</h3>
+            <p>Um livro personalizado que registra, de forma lúdica e acolhedora, o céu do momento em que essa criança chegou ao mundo.</p>
+          </article>
         </div>
       </section>
 

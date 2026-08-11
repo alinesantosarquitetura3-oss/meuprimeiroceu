@@ -213,6 +213,13 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .priceCard ul { flex: 1; margin: 28px 0; padding: 0; list-style: none; }
 .priceCard li { padding: 8px 0; font-size: 15px; }
 
+.purchaseNotices { position: relative; z-index: 1; width: min(980px, 100%); margin: 0 auto 50px; display: grid; gap: 16px; }
+.purchaseNotices article { display: flex; align-items: flex-start; gap: 18px; padding: 24px 26px; border: 1px solid rgba(255,255,255,.32); border-radius: 22px; background: rgba(17,10,49,.86); backdrop-filter: blur(8px); }
+.purchaseNotices article.noticeCritical { border: 2px solid var(--yellow); background: rgba(253,194,43,.13); }
+.noticeIcon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--blue); font-weight: 800; }
+.purchaseNotices h3 { margin: 0 0 7px; color: var(--cream); font-family: "Fraunces Variable", Georgia, serif; font-size: 23px; line-height: 1.15; }
+.purchaseNotices p { margin: 0; color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.55; }
+
 .testimonials { padding-top: 70px; padding-bottom: 34px; }
 .testimonials .sectionTitle { max-width: 850px; }
 .testimonialGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -240,6 +247,16 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .selected span { color: var(--aqua); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
 .selected p { margin: 4px 0 0; color: var(--cream); }
 form { padding: 38px; border: 1px solid var(--light); border-radius: 30px; background: white; box-shadow: var(--shadow); }
+.afterPurchase { padding: 38px; border: 1px solid var(--light); border-radius: 30px; background: white; box-shadow: var(--shadow); }
+.afterPurchase h3 { margin: 0 0 14px; font-family: "Fraunces Variable", Georgia, serif; font-size: 31px; line-height: 1.1; }
+.afterPurchase > p:not(.eyebrow):not(.deadlineNote) { color: rgba(17,10,49,.72); }
+.afterPurchase ul { margin: 22px 0; padding: 0; list-style: none; }
+.afterPurchase li { position: relative; padding: 8px 0 8px 28px; border-bottom: 1px solid rgba(17,10,49,.1); font-size: 15px; }
+.afterPurchase li::before { content: '✦'; position: absolute; left: 0; color: var(--pink); }
+.privacyMini { margin: 24px 0 18px; padding: 18px; border-left: 5px solid var(--aqua); border-radius: 0 14px 14px 0; background: rgba(100,224,226,.12); }
+.privacyMini p, .deadlineNote { margin: 5px 0 0; font-size: 14px; }
+.deadlineNote { color: rgba(17,10,49,.72); }
+.checkoutPending { display: block; margin-top: 10px; color: rgba(17,10,49,.56); text-align: center; }
 fieldset { margin: 0 0 30px; padding: 0; border: 0; }
 legend { margin-bottom: 18px; font-weight: 700; }
 .picker { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -335,7 +352,8 @@ footer a { color: var(--aqua); }
   .meaning h2 + .muted { margin-top: 24px; }
   .pricing { padding-left: 20px; padding-right: 20px; }
   .order { gap: 36px; margin-top: 30px; margin-bottom: 30px; padding: 44px 28px; }
-  form { padding: 28px 22px; }
+  form, .afterPurchase { padding: 28px 22px; }
+  .purchaseNotices article { padding: 20px; }
   .picker, .fields { grid-template-columns: 1fr; }
   .fields .full { grid-column: auto; }
   .cosmicSymbol { transform: none; }

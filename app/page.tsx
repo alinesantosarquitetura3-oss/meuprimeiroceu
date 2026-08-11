@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const plans = {
   resumido: { name: "Storybook Resumido", pages: "8 páginas", price: "R$ 69,90" },
@@ -10,17 +10,9 @@ type Plan = keyof typeof plans;
 
 export default function Home() {
   const [plan, setPlan] = useState<Plan>("completo");
-  const [review, setReview] = useState(false);
-
   const choose = (value: Plan) => {
     setPlan(value);
-    setReview(false);
     document.getElementById("pedido")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const submit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setReview(true);
   };
 
   return (
@@ -87,7 +79,7 @@ export default function Home() {
           <h2 id="product-desire-title">O <span className="titleSky">céu</span> do nascimento transformado em uma leitura única sobre seu filho.</h2>
           <p>Cada página combina a leitura do mapa natal com uma narrativa delicada, visual e fácil de compreender. É um retrato simbólico para acompanhar quem ele é — do bebê ao adolescente — sem rótulos ou previsões fechadas.</p>
           <div className="desireProof" aria-label="Características do Storybook">
-            <span>Nome e nascimento personalizados</span>
+            <span>Primeiro nome e nascimento personalizados</span>
             <span>Arte adequada à idade</span>
             <span>8 ou 16 páginas</span>
           </div>
@@ -100,7 +92,7 @@ export default function Home() {
         <div className="sectionTitle"><p className="eyebrow">Do bebê ao adolescente. Único em cada fase.</p><h2>Do nascimento ao livro em três passos</h2></div>
         <div className="steps">
           <article><b>1</b><h3>Escolha o Storybook</h3><p>Selecione a versão de 8 ou 16 páginas conforme a profundidade que deseja.</p></article>
-          <article><b>2</b><h3>Conte onde o <span className="titleSky">céu</span> começou</h3><p>Informe nome, data, horário exato e cidade de nascimento do bebê, da criança ou do adolescente.</p></article>
+          <article><b>2</b><h3>Conte onde o <span className="titleSky">céu</span> começou</h3><p>Após o pagamento, informe apenas o primeiro nome, a data, o horário exato e a cidade de nascimento.</p></article>
           <article><b>3</b><h3>Receba uma memória única</h3><p>O livro é criado, revisado e enviado em PDF para o seu e-mail.</p></article>
         </div>
         <div className="sectionCta"><a className="button action" href="#storybooks">Quero criar esta leitura personalizada</a></div>
@@ -132,6 +124,16 @@ export default function Home() {
       <section className="pricing" id="storybooks">
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da viagem</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> inesquecível.</h2><p>O Completo tem o dobro de páginas e aprofunda a leitura para a família.</p></div>
+        <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
+          <article className="noticeCritical">
+            <span className="noticeIcon" aria-hidden="true">!</span>
+            <div><h3>A hora exata de nascimento é indispensável</h3><p>Confirme o horário registrado na certidão de nascimento ou na Declaração de Nascido Vivo. <strong>Se você não souber essa informação com segurança, não finalize a compra.</strong> Horários aproximados podem alterar o mapa e comprometer a leitura.</p></div>
+          </article>
+          <article>
+            <span className="noticeIcon" aria-hidden="true">✦</span>
+            <div><h3>Cada Storybook possui uma arte única</h3><p>As imagens desta página são ilustrativas. Personagens, elementos celestes, enquadramentos e composições poderão variar, mas serão sempre preservados o <strong>estilo aquarelado</strong>, a <strong>atmosfera celestial</strong> e a <strong>paleta de cores da opção escolhida</strong>.</p></div>
+          </article>
+        </div>
         <div className="priceGrid">
           <article className="priceCard"><p className="label">Retrato essencial</p><h3>Storybook Resumido</h3><p>8 páginas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional do seu filho</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("resumido")}>Quero o Resumido</button></article>
           <article className="priceCard featured"><span className="popular">Mais completo</span><p className="label">Guia para acompanhar o crescimento</p><h3>Storybook Completo</h3><p>16 páginas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Storybook Resumido</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado para bebê, criança ou adolescente</li></ul><button className="button action" onClick={() => choose("completo")}>Quero o Completo</button></article>
@@ -166,14 +168,24 @@ export default function Home() {
 
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Comece a criar</p><h2 className="orderTitle"><span>Conte onde essa</span><span>história começou</span></h2><p className="muted">Informe o horário local registrado no nascimento. Você não precisa calcular fuso ou horário de verão.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
-        <form onSubmit={submit}>
-          <fieldset className="picker"><legend>1. Escolha a versão</legend>{(Object.keys(plans) as Plan[]).map(key => <label key={key} className={plan===key?"picked":""}><input type="radio" name="plano" checked={plan===key} onChange={()=>setPlan(key)}/><span><strong>{plans[key].name}</strong><small>{plans[key].pages} · {plans[key].price}</small></span></label>)}</fieldset>
-          <fieldset><legend>2. Dados para o Storybook</legend><div className="fields"><label><span>Nome do bebê, criança ou adolescente</span><input name="childName" required /></label><label><span>Data de nascimento</span><input type="date" required /></label><label><span>Horário exato</span><input type="time" required /></label><label><span>Cidade de nascimento</span><input name="city" required /></label><label><span>Estado / Província</span><input name="region" /></label><label><span>País</span><input name="country" required /></label><label className="full"><span>Seu nome</span><input name="buyer" autoComplete="name" required /></label><label className="full"><span>E-mail para receber o livro</span><input type="email" autoComplete="email" required /></label></div></fieldset>
-          <label className="check"><input type="checkbox" required/><span>Conferi os dados de nascimento e entendo que eles serão usados para criar o livro personalizado.</span></label>
-          <button className="button action submit" type="submit">Revisar dados e continuar</button><p className="note">Nenhum pagamento é realizado nesta tela de demonstração.</p>
-          {review && <div className="review" role="status"><strong>Estrutura do pedido pronta.</strong><p>O próximo passo será conectar o pagamento e salvar o pedido com segurança.</p></div>}
-        </form>
+        <div className="orderIntro"><p className="eyebrow">Depois da compra</p><h2 className="orderTitle"><span>Seus dados ficam</span><span>para o próximo passo</span></h2><p className="muted">Você escolhe e paga o Storybook primeiro. Somente após a confirmação do pagamento receberá o acesso ao formulário seguro.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
+        <div className="afterPurchase">
+          <p className="eyebrow">Após a confirmação do pagamento</p>
+          <h3>Você receberá o formulário para iniciar a produção</h3>
+          <p>O formulário solicitará apenas os dados indispensáveis para criar e entregar o Storybook:</p>
+          <ul>
+            <li><strong>primeiro nome</strong> do bebê, da criança ou do adolescente — nunca o nome completo;</li>
+            <li>data de nascimento;</li>
+            <li>hora exata registrada;</li>
+            <li>cidade, estado ou província e país de nascimento;</li>
+            <li>faixa etária e escolha da arte infantil ou adolescente;</li>
+            <li>e-mail da pessoa responsável pela compra.</li>
+          </ul>
+          <div className="privacyMini"><strong>Privacidade desde o início</strong><p>Coletamos somente o necessário. O primeiro nome é suficiente para personalizar o livro; o nome completo da criança ou do adolescente não será solicitado.</p></div>
+          <p className="deadlineNote">O prazo de produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p>
+          <button className="button action submit" type="button">Ir para o pagamento do {plans[plan].name.replace("Storybook ", "")}</button>
+          <small className="checkoutPending">O checkout será conectado na próxima etapa.</small>
+        </div>
       </section>
 
       <section className="section faq"><img className="cosmicSymbol faqStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" /><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
@@ -181,6 +193,8 @@ export default function Home() {
         <details><summary>Posso comprar para um bebê, uma criança ou um adolescente?</summary><p>Sim. A leitura parte do nascimento e pode ser criada e revisitada em qualquer fase do crescimento.</p></details>
         <details><summary>Posso comprar para alguém nascido fora do Brasil?</summary><p>Sim. Informe o horário local, cidade, estado ou província e país do nascimento.</p></details>
         <details><summary>E se eu não souber o horário exato?</summary><p>O horário é indispensável nesta primeira versão. Consulte a certidão antes de comprar.</p></details>
+        <details><summary>Preciso informar o nome completo?</summary><p>Não. Solicitamos somente o primeiro nome do bebê, da criança ou do adolescente. O nome completo não é necessário para a leitura e não será solicitado.</p></details>
+        <details><summary>As artes serão idênticas às imagens da página?</summary><p>Não necessariamente. Cada Storybook tem composição própria, mas sempre mantém o estilo aquarelado, a atmosfera celestial e a paleta de cores da opção escolhida.</p></details>
         <details><summary>Como receberei o Storybook?</summary><p>Você receberá um arquivo PDF no e-mail informado no pedido.</p></details>
         <details><summary>O prazo de 24 horas vale sempre?</summary><p>Não. É exclusivo da primeira semana de lançamento e sujeito ao limite diário.</p></details>
       </div></section>

@@ -213,6 +213,19 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 .priceCard ul { flex: 1; margin: 28px 0; padding: 0; list-style: none; }
 .priceCard li { padding: 8px 0; font-size: 15px; }
 
+.testimonials { padding-top: 70px; padding-bottom: 34px; }
+.testimonials .sectionTitle { max-width: 850px; }
+.testimonialGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testimonialPlaceholder {
+  min-height: 210px; display: flex; flex-direction: column; justify-content: center;
+  padding: 30px; border: 1px dashed rgba(253, 194, 43, .65); border-radius: 26px;
+  background: rgba(255, 255, 255, .055); text-align: center;
+}
+.testimonialPlaceholder > span { color: var(--yellow); font-family: Georgia, serif; font-size: 66px; line-height: .65; }
+.testimonialPlaceholder p { margin: 20px 0 5px; color: var(--cream); font-weight: 700; }
+.testimonialPlaceholder small { color: rgba(255, 255, 255, .55); font-size: 12px; }
+.testimonialsStar { width: 46px; right: 2%; top: 80px; opacity: .75; }
+
 .order {
   display: grid; grid-template-columns: .82fr 1.18fr; gap: 72px; align-items: start;
   margin-top: 48px; margin-bottom: 48px; padding: 60px 56px;
@@ -220,6 +233,7 @@ h1 { font-size: clamp(58px, 6.2vw, 92px); }
 }
 .order .muted { color: rgba(17, 10, 49, .7); }
 .orderIntro { position: sticky; top: 30px; }
+.orderTitle span { display: block; white-space: nowrap; }
 .selected { margin-top: 30px; padding: 22px; border-radius: 20px; background: var(--blue); color: white; }
 .selected span, .selected strong { display: block; }
 .selected span { color: var(--aqua); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
@@ -314,6 +328,7 @@ footer a { color: var(--aqua); }
   .sectionTitle h2 + p { margin-top: 24px; }
   .cosmicSteps::before { inset: 16px -20px; background-size: auto 100%; }
   .steps, .priceGrid { grid-template-columns: 1fr; }
+  .testimonialGrid { grid-template-columns: 1fr; }
   .featured { transform: none !important; }
   .meaning { gap: 40px; }
   .meaning h2 + .muted { margin-top: 24px; }
@@ -351,6 +366,7 @@ footer a { color: var(--aqua); }
   .laptopScreen { padding: 10px 10px 12px; border-radius: 14px 14px 6px 6px; }
   .storybookPreview > p { margin-left: 0; }
   .order { width: calc(100% - 20px); padding: 38px 16px; }
+  .orderTitle { font-size: clamp(38px, 10.6vw, 48px); letter-spacing: -.035em; }
 }
 
 @media (prefers-reduced-motion: reduce) {

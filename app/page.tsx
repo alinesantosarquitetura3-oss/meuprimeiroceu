@@ -138,9 +138,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section testimonials" aria-labelledby="testimonials-title">
+        <img className="cosmicSymbol testimonialsStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
+        <div className="sectionTitle">
+          <p className="eyebrow">Quem já recebeu um céu só seu</p>
+          <h2 id="testimonials-title">Histórias de quem já viveu essa experiência</h2>
+          <p>Este espaço receberá depoimentos reais de famílias que compraram o Meu Primeiro Céu.</p>
+        </div>
+        <div className="testimonialGrid">
+          {[1, 2, 3].map((item) => (
+            <article className="testimonialPlaceholder" key={item}>
+              <span aria-hidden="true">“</span>
+              <p>Depoimento de cliente</p>
+              <small>Texto e identificação serão adicionados após autorização.</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Comece a criar</p><h2>Conte onde essa história começou</h2><p className="muted">Informe o horário local registrado no nascimento. Você não precisa calcular fuso ou horário de verão.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
+        <div className="orderIntro"><p className="eyebrow">Comece a criar</p><h2 className="orderTitle"><span>Conte onde essa</span><span>história começou</span></h2><p className="muted">Informe o horário local registrado no nascimento. Você não precisa calcular fuso ou horário de verão.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
         <form onSubmit={submit}>
           <fieldset className="picker"><legend>1. Escolha a versão</legend>{(Object.keys(plans) as Plan[]).map(key => <label key={key} className={plan===key?"picked":""}><input type="radio" name="plano" checked={plan===key} onChange={()=>setPlan(key)}/><span><strong>{plans[key].name}</strong><small>{plans[key].pages} · {plans[key].price}</small></span></label>)}</fieldset>
           <fieldset><legend>2. Dados para o Storybook</legend><div className="fields"><label><span>Nome da criança</span><input name="childName" required /></label><label><span>Data de nascimento</span><input type="date" required /></label><label><span>Horário exato</span><input type="time" required /></label><label><span>Cidade de nascimento</span><input name="city" required /></label><label><span>Estado / Província</span><input name="region" /></label><label><span>País</span><input name="country" required /></label><label className="full"><span>Seu nome</span><input name="buyer" autoComplete="name" required /></label><label className="full"><span>E-mail para receber o livro</span><input type="email" autoComplete="email" required /></label></div></fieldset>

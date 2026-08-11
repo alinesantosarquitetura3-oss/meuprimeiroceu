@@ -248,9 +248,15 @@ input:focus { outline: 0; border-color: var(--aqua); box-shadow: 0 0 0 2px var(-
   position: absolute; z-index: 2; display: block; width: 110px; height: auto;
   pointer-events: none; user-select: none; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .2));
 }
-.heroStar { width: 54px; right: 3.5%; top: 9%; transform: rotate(12deg); }
+.heroStar {
+  width: 44px; right: 24px; top: auto; bottom: 10px;
+  opacity: .78; transform: rotate(12deg);
+}
 .desirePlanet { z-index: -1; width: 142px; right: -86px; top: 8%; opacity: .78; transform: rotate(11deg); }
-.desireMoon { width: 58px; left: 48%; bottom: 3%; transform: rotate(-12deg); }
+.desireMoon {
+  width: 50px; left: 16%; bottom: 4px;
+  opacity: .82; transform: rotate(-12deg);
+}
 .stepsHouse { width: 82px; right: -30px; top: 30px; transform: rotate(7deg); }
 .meaningTelescope { width: 94px; right: -44px; bottom: 18px; opacity: .9; }
 .pricingPlanet { width: 128px; left: -34px; top: 42px; opacity: .78; transform: rotate(-9deg); }
@@ -309,9 +315,9 @@ footer a { color: var(--aqua); }
   .picker, .fields { grid-template-columns: 1fr; }
   .fields .full { grid-column: auto; }
   .cosmicSymbol { transform: none; }
-  .heroStar { width: 38px; right: 12px; top: 16px; }
+  .heroStar { width: 32px; right: 12px; top: auto; bottom: 9px; }
   .desirePlanet { width: 92px; right: -42px; top: 3%; opacity: .62; }
-  .desireMoon { width: 44px; left: 8px; bottom: 46%; }
+  .desireMoon { width: 36px; left: 14%; top: auto; bottom: 4px; }
   .stepsHouse { width: 60px; right: -8px; top: 20px; }
   .meaningTelescope { width: 68px; right: -12px; bottom: 2px; opacity: .72; }
   .pricingPlanet { width: 84px; left: -28px; top: 30px; opacity: .58; }

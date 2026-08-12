@@ -48,7 +48,7 @@ export default function Home() {
         <div className="productMockup">
           <span className="mockupSpark mockupSparkOne" aria-hidden="true">✦</span>
           <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
-          <img src="/assets/media/mockup-livro-breno.webp" alt="Representação do Storybook personalizado O Céu de Breno" />
+          <img src="/assets/media/mockup-livro-breno-transparent.webp" alt="Representação do Storybook personalizado O Céu de Breno" />
           <p>Representação artística · entrega em PDF digital</p>
         </div>
         <div className="productDesireCopy">

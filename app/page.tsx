@@ -24,9 +24,9 @@ export default function Home() {
       <section className="hero">
         <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
-          <p className="eyebrow">Um novo olhar para acompanhar cada fase</p>
-          <h1>Antes mesmo de conhecer o mundo, seu filho já tinha um <span className="titleSky">céu</span> só dele.</h1>
-          <p className="lead">Transformamos o mapa astral do nascimento em um storybook personalizado, leve e visual — uma leitura para compreender melhor seu bebê, sua criança ou seu adolescente.</p>
+          <p className="eyebrow">Cada nascimento inaugura um céu</p>
+          <h1>E cada criança inaugura um universo inteiro por descobrir.</h1>
+          <p className="lead">O Meu Primeiro <span className="titleSky">Céu</span> transforma o mapa astral do nascimento em uma história personalizada sobre singularidade, possibilidades e maneiras únicas de sentir o mundo — do bebê ao adolescente.</p>
           <div className="introFilm" aria-label="Uma primeira viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
             <video autoPlay muted loop playsInline controls controlsList="nodownload" preload="metadata" aria-label="Vídeo apresentando as páginas de O Céu de Breno">
@@ -34,7 +34,7 @@ export default function Home() {
             </video>
           </div>
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Descobrir como funciona</a></div>
-          <ul className="trust"><li>PDF personalizado</li><li>Leitura sem rótulos</li><li>Entrega digital</li></ul>
+          <ul className="trust"><li>PDF personalizado</li><li>Pistas, não previsões</li><li>Entrega digital</li></ul>
         </div>
         <div className="fitTable" aria-label="Para quem este Storybook é indicado">
           <article className="fitYes">
@@ -75,9 +75,9 @@ export default function Home() {
           <p>Representação artística · entrega em PDF digital</p>
         </div>
         <div className="productDesireCopy">
-          <p className="eyebrow">Um livro que começa no instante do nascimento</p>
-          <h2 id="product-desire-title">O <span className="titleSky">céu</span> do nascimento transformado em uma leitura única sobre seu filho.</h2>
-          <p>Cada página combina a leitura do mapa natal com uma narrativa delicada, visual e fácil de compreender. É um retrato simbólico para acompanhar quem ele é — do bebê ao adolescente — sem rótulos ou previsões fechadas.</p>
+          <p className="eyebrow">Uma história que começa no instante do nascimento</p>
+          <h2 id="product-desire-title">O primeiro <span className="titleSky">céu</span> transformado em uma história sobre quem seu filho está se tornando.</h2>
+          <p>Cada página traduz símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender. Não é um relatório nem uma previsão: é um retrato simbólico para a família observar, sentir e guardar.</p>
           <div className="desireProof" aria-label="Características do Storybook">
             <span>Primeiro nome e nascimento personalizados</span>
             <span>Arte adequada à idade</span>
@@ -85,6 +85,20 @@ export default function Home() {
           </div>
           <a className="button action" href="#storybooks">Quero conhecer meu filho mais a fundo</a>
         </div>
+      </section>
+
+      <section className="brandManifesto" aria-labelledby="manifesto-title">
+        <div className="manifestoIntro">
+          <p className="eyebrow">Nossa forma de olhar</p>
+          <h2 id="manifesto-title">O mapa mostra sementes, não sentenças.</h2>
+          <p>Não olhamos para um mapa para dizer quem uma criança será. Olhamos para encontrar pistas: potenciais, necessidades emocionais e maneiras de perceber o mundo que talvez mereçam mais atenção.</p>
+        </div>
+        <div className="manifestoPrinciples" aria-label="Princípios do Meu Primeiro Céu">
+          <article><span>01</span><strong>Curiosidade</strong><p>em vez de certezas</p></article>
+          <article><span>02</span><strong>Presença</strong><p>em vez de expectativas</p></article>
+          <article><span>03</span><strong>Encantamento</strong><p>em vez de rótulos</p></article>
+        </div>
+        <blockquote>“Conhecer uma criança não é descobrir antecipadamente quem ela será. É prestar atenção em quem ela está se tornando.”</blockquote>
       </section>
 
       <section className="section cosmicSteps" id="como">
@@ -115,7 +129,7 @@ export default function Home() {
           </div>
           <p><strong>O Céu de Breno</strong><span>Veja como o livro percorre personalidade, emoções, talentos e formas de acolher.</span></p>
         </div>
-        <div><p className="eyebrow">Astrologia que aproxima</p><h2>Não é um manual sobre quem seu filho deve ser.</h2><p className="muted">É um convite para observar com mais delicadeza em qualquer fase do crescimento. O Storybook apresenta potenciais, necessidades emocionais e formas de acolhimento — do bebê ao adolescente — sem determinismo, linguagem pesada ou rótulos.</p>
+        <div><p className="eyebrow">Astrologia que aproxima</p><h2>Descobrir antes de definir. Celebrar antes de comparar.</h2><p className="muted">Este não é um manual sobre quem seu filho deve ser. É um convite para observá-lo com mais curiosidade, presença e delicadeza em qualquer fase do crescimento — sem determinismo, linguagem pesada ou rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
           <a className="button action inlineCta" href="#storybooks">Ver os dois Storybooks</a>
         </div>
@@ -145,7 +159,7 @@ export default function Home() {
         <div className="sectionTitle">
           <p className="eyebrow">Muito além de uma lembrança bonita</p>
           <h2 id="testimonials-title">O que este livro pode transformar</h2>
-          <p>Um novo jeito de observar e compreender seu filho, seja ele bebê, criança ou adolescente.</p>
+          <p>Um olhar que troca comparação por curiosidade, expectativa por descoberta e rótulo por possibilidade.</p>
         </div>
         <div className="testimonialGrid">
           <article className="transformationCard">
@@ -199,7 +213,13 @@ export default function Home() {
         <details><summary>O prazo de 24 horas vale sempre?</summary><p>Não. É exclusivo da primeira semana de lançamento e sujeito ao limite diário.</p></details>
       </div></section>
 
-      <footer><img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu"/><p>Um roteiro simbólico para reconhecer o universo astrológico do seu filho, do bebê ao adolescente.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro <span className="titleSky">Céu</span>.</small></footer>
+      <section className="manifestoClosing" aria-label="Essência do Meu Primeiro Céu">
+        <p>Seu primeiro <span className="titleSky">céu</span> é apenas o começo.</p>
+        <h2>Cada <span className="titleSky">céu</span> é único.<br />Cada criança também.</h2>
+        <strong>O <span className="titleSky">céu</span> conta pistas. A criança escreve a história.</strong>
+      </section>
+
+      <footer><img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu"/><p>Uma história sobre singularidade, possibilidades e maneiras únicas de sentir o mundo.</p><a href="mailto:meuprimeiroceu@gmail.com">meuprimeiroceu@gmail.com</a><small>© 2026 Meu Primeiro <span className="titleSky">Céu</span>.</small></footer>
     </main>
   );
 }

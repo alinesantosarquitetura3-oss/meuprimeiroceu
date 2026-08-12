@@ -152,6 +152,25 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .section { position: relative; width: min(1180px, calc(100% - 40px)); margin: auto; padding: 76px 0; }
 .sectionTitle { position: relative; z-index: 1; max-width: 780px; margin: 0 auto 42px; text-align: center; }
 .sectionTitle > p:last-child { color: rgba(255, 255, 255, .72); }
+.brandManifesto {
+  position: relative; overflow: hidden; width: min(1180px, calc(100% - 40px)); margin: 24px auto 34px;
+  padding: 72px; border: 1px solid rgba(253, 194, 43, .5); border-radius: 42px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(100, 224, 226, .14), transparent 24%),
+    radial-gradient(circle at 8% 92%, rgba(212, 107, 187, .16), transparent 28%),
+    linear-gradient(145deg, rgba(41, 62, 125, .62), rgba(9, 5, 29, .96));
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .22);
+}
+.brandManifesto::after { content: '✦'; position: absolute; right: 44px; top: 28px; color: var(--yellow); font-size: 34px; opacity: .72; }
+.manifestoIntro { max-width: 820px; }
+.manifestoIntro h2 { max-width: 780px; }
+.manifestoIntro > p:last-child { max-width: 760px; margin: 28px 0 0; color: rgba(255,255,255,.78); font-size: 19px; }
+.manifestoPrinciples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 42px 0; }
+.manifestoPrinciples article { padding: 24px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.07); }
+.manifestoPrinciples span { display: block; margin-bottom: 14px; color: var(--aqua); font-size: 12px; letter-spacing: .12em; }
+.manifestoPrinciples strong { display: block; color: var(--cream); font-family: "Fraunces Variable", Georgia, serif; font-size: 25px; line-height: 1.1; }
+.manifestoPrinciples p { margin: 4px 0 0; color: rgba(255,255,255,.62); font-size: 14px; }
+.brandManifesto blockquote { max-width: 930px; margin: 0; padding: 0 0 0 26px; border-left: 5px solid var(--yellow); color: white; font-family: "Fraunces Variable", Georgia, serif; font-size: clamp(25px, 3vw, 38px); line-height: 1.18; }
 .cosmicSteps::before {
   content: ''; position: absolute; z-index: 0; inset: 24px -120px; border-radius: 50px;
   background: linear-gradient(90deg, rgba(17, 10, 49, .94) 30%, rgba(17, 10, 49, .48)), url('/assets/media/fundo2.jpg') right 34%/54% auto no-repeat;
@@ -279,6 +298,10 @@ input:focus { outline: 0; border-color: var(--aqua); box-shadow: 0 0 0 2px var(-
 .review p { margin: 4px 0 0; font-size: 14px; }
 
 .faq { max-width: 880px; }
+.manifestoClosing { padding: 96px 24px; background: linear-gradient(to bottom, var(--blue), var(--logo-background-dark)); text-align: center; }
+.manifestoClosing > p { margin: 0 0 18px; color: var(--aqua); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.manifestoClosing h2 { max-width: 900px; margin: 0 auto 26px; }
+.manifestoClosing > strong { display: block; color: var(--cream); font-size: clamp(18px, 2.2vw, 26px); }
 
 .cosmicSymbol {
   position: absolute; z-index: 2; display: block; width: 110px; height: auto;
@@ -343,6 +366,9 @@ footer a { color: var(--aqua); }
   .productMockup { width: min(620px, 100%); margin: auto; }
   .productDesireCopy > p:not(.eyebrow) { font-size: 17px; }
   .section { padding: 52px 0; }
+  .brandManifesto { padding: 52px 30px; }
+  .manifestoPrinciples { grid-template-columns: 1fr; gap: 10px; }
+  .manifestoClosing { padding: 72px 24px; }
   .sectionTitle { margin-bottom: 34px; }
   .sectionTitle h2 + p { margin-top: 24px; }
   .cosmicSteps::before { inset: 16px -20px; background-size: auto 100%; }

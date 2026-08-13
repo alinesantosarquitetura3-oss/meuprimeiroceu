@@ -46,9 +46,8 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
-          <p className="eyebrow">Cada nascimento inaugura um céu</p>
-          <h1 id="hero-title">E cada criança inaugura um universo inteiro por descobrir.</h1>
-          <p className="lead"><strong>Um Storybook astrológico personalizado:</strong> um livro digital ilustrado, criado a partir do céu do nascimento da criança. Ele traduz o mapa astral em páginas sobre personalidade, emoções, talentos e formas únicas de perceber o mundo.</p>
+          <h1 id="hero-title">Transforme o céu do nascimento da sua criança em uma história sobre quem ela é.</h1>
+          <p className="lead"><strong>Um storybook personalizado para descobrir, compreender e guardar.</strong></p>
           <p className="heroDefinition">Não é um relatório técnico. É uma história personalizada para a família compreender, guardar e revisitar.</p>
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Ver como funciona</a></div>
           <ul className="trust"><li>Livro digital em alta qualidade</li><li>Pistas, não previsões</li><li>Entrega em até 24 horas*</li></ul>

@@ -14,7 +14,7 @@
   --pink: #D46BBB;
   --violet: #AD67F3;
   --aqua: #64E0E2;
-  --paper: #FFFDF7;
+  --paper: #E7E1F5;
   --shadow: 0 22px 60px rgba(17, 10, 49, .24);
 }
 
@@ -90,8 +90,8 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .fitTable { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
 .fitTable article { position: relative; overflow: hidden; padding: 34px 30px; border-radius: 28px; color: var(--blue); box-shadow: 0 22px 55px rgba(0, 0, 0, .25); }
 .fitTable article::after { content: ''; position: absolute; inset: auto -35px -42px auto; width: 130px; height: 130px; border-radius: 50%; background: currentColor; opacity: .055; }
-.fitYes { background: linear-gradient(145deg, #fffdf7, #fdecbd); border: 2px solid var(--yellow); }
-.fitNo { background: linear-gradient(145deg, #f9f4ff, #e6ddf6); border: 2px solid rgba(173, 103, 243, .55); }
+.fitYes { background: linear-gradient(145deg, #ffd9ea, #f6c0d9 48%, #f6d77f); border: 2px solid var(--yellow); }
+.fitNo { background: linear-gradient(145deg, #d8cef4, #c7d9f3 52%, #b9e6e6); border: 2px solid rgba(173, 103, 243, .55); }
 .fitIcon { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 50%; background: var(--blue); color: var(--yellow); font-size: 23px; }
 .fitNo .fitIcon { color: var(--cream); }
 .fitTable h2 { margin: 0 0 18px; font-family: "Fraunces Variable", Georgia, serif; font-size: 28px; font-weight: 650; line-height: 1.1; }
@@ -163,7 +163,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .digitalValue strong { color: var(--cream); }
 .digitalValue span { color: rgba(255,255,255,.68); font-size: 14px; }
 
-.personalization { padding: 88px max(40px, calc((100vw - 1180px)/2)); background: #fffaf0; color: var(--blue); }
+.personalization { padding: 88px max(40px, calc((100vw - 1180px)/2)); background: radial-gradient(circle at 12% 16%, rgba(100,224,226,.38), transparent 28%), radial-gradient(circle at 88% 78%, rgba(212,107,187,.28), transparent 32%), linear-gradient(145deg, #e4dcf3, #cfe7ec 48%, #f4d6e4); color: var(--blue); }
 .personalization .sectionTitle > p:last-child { color: rgba(17,10,49,.68); }
 .ageTabs { display: flex; justify-content: center; gap: 10px; margin: 0 auto 16px; }
 .ageTabs button { min-width: 140px; padding: 12px 22px; border: 1px solid rgba(17,10,49,.22); border-radius: 99px; background: transparent; color: var(--blue); font: 700 15px Futura, sans-serif; cursor: pointer; }
@@ -320,7 +320,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .selected span, .selected strong { display: block; }
 .selected span { color: var(--aqua); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
 .selected p { margin: 4px 0 0; color: var(--cream); }
-form { padding: 38px; border: 1px solid var(--light); border-radius: 30px; background: white; box-shadow: var(--shadow); }
+form { padding: 38px; border: 1px solid var(--light); border-radius: 30px; background: linear-gradient(145deg, #d8eaf0, #ead7ef); box-shadow: var(--shadow); }
 .afterPurchase { padding: 38px; border: 1px solid rgba(17,10,49,.18); border-radius: 30px; background: linear-gradient(145deg, rgba(255,239,184,.82), rgba(222,206,246,.88)); box-shadow: var(--shadow); }
 .orderReturn { margin-top: 28px; text-align: center; }
 .afterPurchase h3 { margin: 0 0 14px; font-family: "Fraunces Variable", Georgia, serif; font-size: 31px; line-height: 1.1; }
@@ -343,7 +343,7 @@ legend { margin-bottom: 18px; font-weight: 700; }
 .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .fields label span { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 700; }
 .fields .full { grid-column: 1/-1; }
-.fields input { width: 100%; min-height: 50px; padding: 10px 13px; border: 1px solid var(--light); border-radius: 12px; background: var(--paper); color: var(--blue); }
+.fields input { width: 100%; min-height: 50px; padding: 10px 13px; border: 1px solid rgba(17,10,49,.2); border-radius: 12px; background: #d9d3ed; color: var(--blue); }
 input:focus { outline: 0; border-color: var(--aqua); box-shadow: 0 0 0 2px var(--aqua); }
 .check { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; }
 .check input { width: 20px; height: 20px; flex: none; }

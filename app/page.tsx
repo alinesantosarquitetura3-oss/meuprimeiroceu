@@ -22,7 +22,7 @@ const ageExamples = {
   adolescente: {
     label: "Adolescente",
     description: "Identidade, autonomia e linguagem visual mais madura.",
-    images: ["adolescente1.jpg", "adolescente2.jpg", "adolescente3.jpg", "adolescente4.jpg"],
+    images: ["adolescente4.jpg", "adolescente1.jpg", "adolescente2.jpg", "adolescente3.jpg"],
   },
 } as const;
 type Age = keyof typeof ageExamples;
@@ -32,14 +32,13 @@ export default function Home() {
   const [age, setAge] = useState<Age>("bebe");
   const choose = (value: Plan) => {
     setPlan(value);
-    document.getElementById("pedido")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <main>
       <header className="siteHeader" id="inicio">
         <a href="#inicio" aria-label="Meu Primeiro Céu — início">
-          <img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
+          <img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
         </a>
         <a className="headerLink" href="#storybooks">Conhecer as versões</a>
       </header>
@@ -56,7 +55,7 @@ export default function Home() {
           <p className="trustFootnote">*Após o pagamento aprovado e o envio completo e correto dos dados.</p>
           <div className="introFilm" aria-label="Uma viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
-            <video muted loop playsInline controls controlsList="nodownload" preload="none" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Vídeo demonstrativo das páginas de O Céu de Breno">
+            <video autoPlay muted loop playsInline preload="metadata" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Vídeo demonstrativo das páginas de O Céu de Breno">
               <source src="/assets/media/video-primeira-dobra-breno.mp4" type="video/mp4" />
             </video>
           </div>
@@ -99,7 +98,7 @@ export default function Home() {
         <div className="storybookPreview">
           <div className="laptop" aria-label="Mockup de laptop exibindo o Storybook O Céu de Breno">
             <div className="laptopScreen"><div className="camera" aria-hidden="true" /><div className="videoFrame">
-              <video muted loop playsInline controls controlsList="nodownload" preload="none" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Prévia demonstrativa do Storybook O Céu de Breno"><source src="/assets/media/ceu-de-breno-scroll.mp4" type="video/mp4" /></video>
+              <video autoPlay muted loop playsInline preload="metadata" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Prévia demonstrativa do Storybook O Céu de Breno"><source src="/assets/media/ceu-de-breno-scroll.mp4" type="video/mp4" /></video>
               <span className="videoBadge">Exemplo demonstrativo</span>
             </div></div><div className="laptopBase" aria-hidden="true"><span /></div>
           </div>
@@ -107,7 +106,7 @@ export default function Home() {
         </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2 id="meaning-title">Descobrir antes de definir. Celebrar antes de comparar.</h2><p className="muted">Um convite para observar com mais curiosidade, presença e delicadeza — sem determinismo, linguagem pesada ou rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
-          <a className="button action inlineCta" href="#storybooks">Comparar Light e Plus</a>
+          <a className="button action inlineCta" href="#storybooks">Comparar Storybook Light e Plus</a>
         </div>
       </section>
 
@@ -127,22 +126,22 @@ export default function Home() {
           <div><span>Mapa astral e síntese prática</span><b>—</b><b>Incluído</b></div>
         </div>
         <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
-          <article className="noticeCritical"><span className="noticeIcon" aria-hidden="true">✓</span><div><h3>Para criar um Storybook fiel ao céu do nascimento</h3><p>Você precisará da <strong>hora exata registrada</strong> na certidão de nascimento ou na Declaração de Nascido Vivo. Ela torna a leitura mais precisa e personalizada. <strong>Já tem essa informação? Você está pronta para escolher seu Storybook.</strong></p><small>Ainda não encontrou a hora? Consulte o documento antes de concluir a compra.</small></div></article>
+          <article className="noticeCritical"><span className="noticeIcon" aria-hidden="true">✓</span><div><h3>Para criar um Storybook fiel ao céu do nascimento</h3><p>Você precisará da <strong>hora exata registrada</strong> na certidão de nascimento ou na Declaração de Nascido Vivo. Ela torna a leitura precisa e personalizada. <strong>Já tem essa informação? Ela é imprescindível para gerar o livro 100% correto.</strong></p><small>Ainda não encontrou a hora? Consulte o documento antes de concluir a compra.</small></div></article>
           <article><span className="noticeIcon" aria-hidden="true">✦</span><div><h3>Cada Storybook possui uma arte única</h3><p>As imagens desta página são ilustrativas. Personagens, elementos celestes, enquadramentos e composições poderão variar, mas serão sempre preservados o <strong>estilo aquarelado</strong>, a <strong>atmosfera celestial</strong> e a <strong>paleta de cores da opção escolhida</strong>.</p></div></article>
         </div>
       </section>
 
       <section className="section fitSection" aria-label="Para quem o Meu Primeiro Céu é indicado">
         <div className="fitTable">
-          <article className="fitYes"><span className="fitIcon" aria-hidden="true">✦</span><h2>Este livro é para você se…</h2><ul><li>quer compreender melhor seu bebê, criança ou adolescente;</li><li>deseja reconhecer emoções, talentos e necessidades;</li><li>prefere linguagem leve e poucos termos técnicos;</li><li>valoriza uma memória para revisitar ao longo da vida.</li></ul></article>
+          <article className="fitYes"><span className="fitIcon" aria-hidden="true">✦</span><h2>Este livro é para você se…</h2><ul><li>ama astrologia e quer compreender melhor seu bebê, criança ou adolescente;</li><li>deseja reconhecer emoções, talentos e necessidades;</li><li>prefere linguagem leve e poucos termos técnicos astrológicos;</li><li>valoriza uma memória para revisitar ao longo da vida.</li></ul></article>
           <article className="fitNo"><span className="fitIcon" aria-hidden="true">☾</span><h2>Este livro não é para você se…</h2><ul><li>procura previsões fechadas sobre o futuro;</li><li>espera diagnóstico psicológico, médico ou comportamental;</li><li>busca respostas definitivas sobre quem a criança será;</li><li>quer um conteúdo genérico, sem personalização.</li></ul></article>
         </div>
       </section>
 
       <section className="section cosmicSteps" id="como">
         <img className="cosmicSymbol stepsPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
-        <div className="sectionTitle"><p className="eyebrow">Do nascimento ao livro</p><h2>Como funciona em três passos</h2></div>
-        <div className="steps"><article><b>1</b><h3>Escolha Light ou Plus</h3><p>Selecione 8 ou 16 páginas conforme a profundidade desejada.</p></article><article><b>2</b><h3>Informe os dados após pagar</h3><p>Envie apenas o primeiro nome, a data, a hora exata e o local de nascimento pelo formulário seguro.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
+        <div className="sectionTitle"><p className="eyebrow">Do nascimento ao livro</p><h2>Como funciona em 3 passos</h2></div>
+        <div className="steps"><article><b>1</b><h3>Escolha Light ou Plus</h3><p>Selecione 8 ou 16 páginas conforme a profundidade desejada.</p></article><article><b>2</b><h3>Informe os dados durante o pagamento</h3><p>Preencha o formulário seguro com o primeiro nome, a data, a hora exata e o local de nascimento.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
       </section>
 
       <section className="brandManifesto" aria-labelledby="manifesto-title">
@@ -153,7 +152,7 @@ export default function Home() {
 
       <section className="section responsibleReading" aria-labelledby="responsible-title">
         <div><p className="eyebrow">Encantamento com responsabilidade</p><h2 id="responsible-title">Uma leitura simbólica, afetiva e responsável.</h2></div>
-        <p>O Meu Primeiro Céu usa a astrologia como linguagem simbólica para observar tendências, sensibilidades e possibilidades do nascimento. Não define destinos nem substitui acompanhamento médico, psicológico ou pedagógico. É um convite para conhecer melhor, observar com mais atenção e acompanhar cada criança com mais presença.</p>
+        <p>O Meu Primeiro Céu usa a astrologia como linguagem simbólica para observar tendências, sensibilidades e possibilidades do nascimento do seu filho ou filha. Feito por uma astróloga que também é mãe e entende as dores e dúvidas do dia a dia. Ele não define destinos nem substitui acompanhamento médico, psicológico ou pedagógico. É um convite para conhecer melhor, observar com mais atenção e acompanhar cada criança com mais presença.</p>
       </section>
 
       <section className="section testimonials" aria-labelledby="testimonials-title">
@@ -161,15 +160,10 @@ export default function Home() {
         <div className="testimonialGrid"><article className="transformationCard"><span aria-hidden="true">✦</span><h3>Mais clareza para compreender</h3><p>Reconheça características, necessidades emocionais e formas particulares de expressão.</p></article><article className="transformationCard"><span aria-hidden="true">☾</span><h3>Outro olhar sobre desafios</h3><p>Observe o que pode existir por trás de determinadas reações, sem encaixar a criança em padrões.</p></article><article className="transformationCard"><span aria-hidden="true">★</span><h3>Um retrato para revisitar</h3><p>Uma memória do céu do nascimento que ganha novos sentidos conforme seu filho cresce.</p></article></div>
       </section>
 
-      <section className="section authority" aria-labelledby="authority-title">
-        <div><p className="eyebrow">Interpretação e revisão humana</p><h2 id="authority-title">Criado por Aline Santos, astróloga e idealizadora do Meu Primeiro Céu.</h2></div>
-        <div><p>Cada Storybook parte dos dados reais do nascimento, recebe uma interpretação astrológica em linguagem acessível e passa por revisão antes da entrega.</p><p>O compromisso é traduzir símbolos em possibilidades úteis para a família, com sensibilidade, clareza e responsabilidade.</p></div>
-      </section>
-
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Depois da compra</p><h2 className="orderTitle"><span>Os dados da criança</span><span>ficam para depois</span></h2><p className="muted">Primeiro você escolhe e paga. Após a confirmação, recebe o formulário seguro.</p><div className="selected"><span>Storybook escolhido</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div></div>
-        <div className="afterPurchase"><p className="eyebrow">Após a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p><button className="button action submit" type="button" disabled aria-disabled="true">Pagamento do {plans[plan].short} — link em configuração</button></div>
+        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Escolha, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comparar Storybook Light e Plus</a></div>
+        <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
       </section>
 
       <section className="section faq"><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
@@ -183,10 +177,10 @@ export default function Home() {
         <details><summary>Como e quando receberei?</summary><p>O livro digital em PDF de alta qualidade será enviado ao e-mail informado em até 24 horas após o pagamento aprovado e o envio completo e correto dos dados. Você poderá guardar, compartilhar e imprimir o arquivo para uso pessoal.</p></details>
       </div></section>
 
-      <section className="manifestoClosing" aria-label="Essência do Meu Primeiro Céu"><p>Seu primeiro <span className="titleSky">céu</span> é apenas o começo.</p><h2>Cada <span className="titleSky">céu</span> é único.<br />Cada criança também.</h2><strong>O <span className="titleSky">céu</span> conta pistas. A criança escreve a história.</strong></section>
+      <section className="manifestoClosing" aria-label="Essência do Meu Primeiro Céu"><p>Seu primeiro céu é apenas o começo.</p><h2>Cada <span className="titleSky">céu</span> é único.<br />Cada criança também.</h2><strong>O céu conta pistas. A criança escreve a história.</strong></section>
 
       <footer>
-        <img src="/assets/brand/logo-original.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
+        <img src="/assets/brand/logo-square.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
         <p>Uma história sobre singularidade, possibilidades e maneiras únicas de sentir o mundo.</p>
         <div className="legalIdentity"><strong>AS Marketing e Eventos LTDA</strong><span>CNPJ: 63.488.927/0001-32</span><span>Rua do Parque, 361, Jardim Atlântico — Goiânia — GO</span><small>Endereço fiscal</small></div>
         <a href="mailto:omeuceuinterior@gmail.com">omeuceuinterior@gmail.com</a>

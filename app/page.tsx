@@ -8,8 +8,28 @@ const plans = {
 } as const;
 type Plan = keyof typeof plans;
 
+const ageExamples = {
+  bebe: {
+    label: "Bebê",
+    description: "Acolhimento, emoções e pistas práticas para os primeiros anos.",
+    images: ["bebe1.jpg", "bebe2.jpg", "bebe3.jpg", "bebe4.jpg"],
+  },
+  crianca: {
+    label: "Criança",
+    description: "Imaginação, talentos, expressão e desenvolvimento da própria voz.",
+    images: ["crianca1.jpg", "crianca2.jpg", "crianca3.jpg", "crianca4.jpg"],
+  },
+  adolescente: {
+    label: "Adolescente",
+    description: "Identidade, autonomia e linguagem visual mais madura.",
+    images: ["adolescente1.jpg", "adolescente2.jpg", "adolescente3.jpg", "adolescente4.jpg"],
+  },
+} as const;
+type Age = keyof typeof ageExamples;
+
 export default function Home() {
   const [plan, setPlan] = useState<Plan>("plus");
+  const [age, setAge] = useState<Age>("bebe");
   const choose = (value: Plan) => {
     setPlan(value);
     document.getElementById("pedido")?.scrollIntoView({ behavior: "smooth" });
@@ -29,9 +49,10 @@ export default function Home() {
         <div className="heroCopy">
           <p className="eyebrow">Cada nascimento inaugura um céu</p>
           <h1 id="hero-title">E cada criança inaugura um universo inteiro por descobrir.</h1>
-          <p className="lead">Um livro astrológico digital e personalizado que transforma o mapa do nascimento em uma história ilustrada sobre singularidade, emoções e potenciais — do bebê ao adolescente.</p>
+          <p className="lead"><strong>Um Storybook astrológico personalizado:</strong> um livro digital ilustrado, criado a partir do céu do nascimento da criança. Ele traduz o mapa astral em páginas sobre personalidade, emoções, talentos e formas únicas de perceber o mundo.</p>
+          <p className="heroDefinition">Não é um relatório técnico. É uma história personalizada para a família compreender, guardar e revisitar.</p>
           <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Ver como funciona</a></div>
-          <ul className="trust"><li>PDF personalizado</li><li>Pistas, não previsões</li><li>Entrega digital em até 24 horas*</li></ul>
+          <ul className="trust"><li>Livro digital em alta qualidade</li><li>Pistas, não previsões</li><li>Entrega em até 24 horas*</li></ul>
           <p className="trustFootnote">*Após o pagamento aprovado e o envio completo e correto dos dados.</p>
           <div className="introFilm" aria-label="Uma viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
@@ -49,15 +70,28 @@ export default function Home() {
           <span className="mockupSpark mockupSparkOne" aria-hidden="true">✦</span>
           <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
           <img src="/assets/media/mockup-livro-breno-transparent.webp" alt="Representação do Storybook personalizado O Céu de Breno" />
-          <p>Representação artística · entrega em PDF digital</p>
+          <p>Representação artística · produto entregue em PDF de alta qualidade</p>
         </div>
         <div className="productDesireCopy">
           <p className="eyebrow">Uma história que começa no nascimento</p>
           <h2 id="product-desire-title">O primeiro <span className="titleSky">céu</span> transformado em uma história sobre quem seu filho está se tornando.</h2>
-          <p>Cada página traduz símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender. Não é relatório, diagnóstico nem previsão: é um retrato simbólico para a família observar, sentir e guardar.</p>
+          <p>Cada página transforma símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender: um retrato simbólico para a família observar, sentir e guardar.</p>
           <div className="desireProof" aria-label="Características do Storybook"><span>Apenas o primeiro nome</span><span>Arte adequada à idade</span><span>8 ou 16 páginas</span></div>
+          <div className="digitalValue"><strong>Um livro digital pensado para ser guardado como livro.</strong><span>Leia no celular, compartilhe com pessoas importantes e imprima quando quiser.</span></div>
           <a className="button action" href="#storybooks">Conhecer Light e Plus</a>
         </div>
+      </section>
+
+      <section className="personalization" aria-labelledby="personalization-title">
+        <div className="sectionTitle"><p className="eyebrow">Personalização que você consegue ver</p><h2 id="personalization-title">Nenhum <span className="titleSky">céu</span> se repete. Nenhum Storybook também.</h2><p>Não mudamos apenas o nome. A leitura, os temas, a linguagem e a direção visual acompanham a idade e o mapa de cada pessoa.</p></div>
+        <div className="ageTabs" role="tablist" aria-label="Exemplos por faixa etária">
+          {(Object.keys(ageExamples) as Age[]).map((key) => <button key={key} role="tab" aria-selected={age === key} className={age === key ? "active" : ""} onClick={() => setAge(key)}>{ageExamples[key].label}</button>)}
+        </div>
+        <p className="ageDescription">{ageExamples[age].description}</p>
+        <div className="exampleGrid" role="tabpanel">
+          {ageExamples[age].images.map((image, index) => <button className="exampleCard" key={image} onClick={() => window.open(`/assets/examples/${image}`, "_blank")} aria-label={`Ampliar exemplo ${index + 1} — ${ageExamples[age].label}`}><img src={`/assets/examples/${image}`} alt={`Página demonstrativa de Storybook para ${ageExamples[age].label.toLowerCase()}`} loading="lazy" /><span>Ampliar página</span></button>)}
+        </div>
+        <p className="examplesNote">Exemplos demonstrativos. Cada Storybook recebe composição própria, preservando a identidade aquarelada da marca.</p>
       </section>
 
       <section className="section meaning" aria-labelledby="meaning-title">
@@ -84,8 +118,16 @@ export default function Home() {
           <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("light")}>Escolher Light</button></article>
           <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><button className="button action" onClick={() => choose("plus")}>Escolher Plus</button></article>
         </div>
+        <div className="planComparison" aria-label="Comparação entre Light e Plus">
+          <div className="comparisonHead"><span>O que muda</span><strong>Light</strong><strong>Plus</strong></div>
+          <div><span>Extensão</span><b>8 páginas</b><b>16 páginas</b></div>
+          <div><span>Proposta</span><b>Primeira descoberta</b><b>Visão aprofundada</b></div>
+          <div><span>Personalidade, emoções e talentos</span><b>Incluído</b><b>Incluído</b></div>
+          <div><span>Comunicação, vínculos, energia e desafios</span><b>—</b><b>Incluído</b></div>
+          <div><span>Mapa astral e síntese prática</span><b>—</b><b>Incluído</b></div>
+        </div>
         <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
-          <article className="noticeCritical"><span className="noticeIcon" aria-hidden="true">!</span><div><h3>A hora exata de nascimento é indispensável</h3><p>Confirme o horário registrado na certidão de nascimento ou na Declaração de Nascido Vivo. <strong>Se você não souber essa informação com segurança, não finalize a compra.</strong> Horários aproximados podem alterar o mapa e comprometer a leitura.</p></div></article>
+          <article className="noticeCritical"><span className="noticeIcon" aria-hidden="true">✓</span><div><h3>Para criar um Storybook fiel ao céu do nascimento</h3><p>Você precisará da <strong>hora exata registrada</strong> na certidão de nascimento ou na Declaração de Nascido Vivo. Ela torna a leitura mais precisa e personalizada. <strong>Já tem essa informação? Você está pronta para escolher seu Storybook.</strong></p><small>Ainda não encontrou a hora? Consulte o documento antes de concluir a compra.</small></div></article>
           <article><span className="noticeIcon" aria-hidden="true">✦</span><div><h3>Cada Storybook possui uma arte única</h3><p>As imagens desta página são ilustrativas. Personagens, elementos celestes, enquadramentos e composições poderão variar, mas serão sempre preservados o <strong>estilo aquarelado</strong>, a <strong>atmosfera celestial</strong> e a <strong>paleta de cores da opção escolhida</strong>.</p></div></article>
         </div>
       </section>
@@ -93,7 +135,7 @@ export default function Home() {
       <section className="section fitSection" aria-label="Para quem o Meu Primeiro Céu é indicado">
         <div className="fitTable">
           <article className="fitYes"><span className="fitIcon" aria-hidden="true">✦</span><h2>Este livro é para você se…</h2><ul><li>quer compreender melhor seu bebê, criança ou adolescente;</li><li>deseja reconhecer emoções, talentos e necessidades;</li><li>prefere linguagem leve e poucos termos técnicos;</li><li>valoriza uma memória para revisitar ao longo da vida.</li></ul></article>
-          <article className="fitNo"><span className="fitIcon" aria-hidden="true">☾</span><h2>Este livro não é para você se…</h2><ul><li>procura previsões fechadas sobre o futuro;</li><li>espera diagnóstico psicológico, médico ou comportamental;</li><li>não tem o horário exato do nascimento;</li><li>quer um conteúdo genérico, sem personalização.</li></ul></article>
+          <article className="fitNo"><span className="fitIcon" aria-hidden="true">☾</span><h2>Este livro não é para você se…</h2><ul><li>procura previsões fechadas sobre o futuro;</li><li>espera diagnóstico psicológico, médico ou comportamental;</li><li>busca respostas definitivas sobre quem a criança será;</li><li>quer um conteúdo genérico, sem personalização.</li></ul></article>
         </div>
       </section>
 
@@ -109,6 +151,11 @@ export default function Home() {
         <blockquote>“Conhecer uma criança não é descobrir antecipadamente quem ela será. É prestar atenção em quem ela está se tornando.”</blockquote>
       </section>
 
+      <section className="section responsibleReading" aria-labelledby="responsible-title">
+        <div><p className="eyebrow">Encantamento com responsabilidade</p><h2 id="responsible-title">Uma leitura simbólica, afetiva e responsável.</h2></div>
+        <p>O Meu Primeiro Céu usa a astrologia como linguagem simbólica para observar tendências, sensibilidades e possibilidades do nascimento. Não define destinos nem substitui acompanhamento médico, psicológico ou pedagógico. É um convite para conhecer melhor, observar com mais atenção e acompanhar cada criança com mais presença.</p>
+      </section>
+
       <section className="section testimonials" aria-labelledby="testimonials-title">
         <div className="sectionTitle"><p className="eyebrow">Muito além de uma lembrança bonita</p><h2 id="testimonials-title">O que este livro pode transformar</h2><p>Um olhar que troca comparação por curiosidade, expectativa por descoberta e rótulo por possibilidade.</p></div>
         <div className="testimonialGrid"><article className="transformationCard"><span aria-hidden="true">✦</span><h3>Mais clareza para compreender</h3><p>Reconheça características, necessidades emocionais e formas particulares de expressão.</p></article><article className="transformationCard"><span aria-hidden="true">☾</span><h3>Outro olhar sobre desafios</h3><p>Observe o que pode existir por trás de determinadas reações, sem encaixar a criança em padrões.</p></article><article className="transformationCard"><span aria-hidden="true">★</span><h3>Um retrato para revisitar</h3><p>Uma memória do céu do nascimento que ganha novos sentidos conforme seu filho cresce.</p></article></div>
@@ -116,7 +163,7 @@ export default function Home() {
 
       <section className="section authority" aria-labelledby="authority-title">
         <div><p className="eyebrow">Interpretação e revisão humana</p><h2 id="authority-title">Criado por Aline Santos, astróloga e idealizadora do Meu Primeiro Céu.</h2></div>
-        <div><p>Cada Storybook parte dos dados reais do nascimento, recebe uma interpretação astrológica em linguagem acessível e passa por revisão antes da entrega.</p><p>O compromisso é claro: traduzir símbolos em possibilidades úteis para a família, sem prever destinos, impor definições ou substituir avaliações profissionais.</p></div>
+        <div><p>Cada Storybook parte dos dados reais do nascimento, recebe uma interpretação astrológica em linguagem acessível e passa por revisão antes da entrega.</p><p>O compromisso é traduzir símbolos em possibilidades úteis para a família, com sensibilidade, clareza e responsabilidade.</p></div>
       </section>
 
       <section className="section order" id="pedido">
@@ -130,10 +177,10 @@ export default function Home() {
         <details><summary>Qual é a diferença entre Light e Plus?</summary><p>O Light tem 8 páginas e apresenta os aspectos essenciais. O Plus tem 16 páginas e aprofunda comunicação, vínculos, energia, desafios e a síntese do mapa.</p></details>
         <details><summary>Posso comprar para bebê, criança ou adolescente?</summary><p>Sim. A leitura e a direção visual são adaptadas à faixa etária.</p></details>
         <details><summary>Posso comprar para alguém nascido fora do Brasil?</summary><p>Sim. Informe o horário local e o local completo do nascimento.</p></details>
-        <details><summary>E se eu não souber o horário exato?</summary><p>Não finalize a compra. Consulte a certidão ou a Declaração de Nascido Vivo antes de comprar.</p></details>
+        <details><summary>Onde encontro a hora exata?</summary><p>Geralmente ela aparece na certidão de nascimento ou na Declaração de Nascido Vivo. Se não estiver com o documento em mãos, localize essa informação antes de concluir o pedido.</p></details>
         <details><summary>Preciso informar o nome completo?</summary><p>Não. Solicitamos somente o primeiro nome. O nome completo não é necessário e não será solicitado.</p></details>
         <details><summary>As artes serão idênticas às imagens da página?</summary><p>Não necessariamente. Cada Storybook tem composição própria, preservando o estilo aquarelado, a atmosfera celestial e a paleta escolhida.</p></details>
-        <details><summary>Como e quando receberei?</summary><p>O PDF será enviado ao e-mail informado em até 24 horas após o pagamento aprovado e o envio completo e correto dos dados.</p></details>
+        <details><summary>Como e quando receberei?</summary><p>O livro digital em PDF de alta qualidade será enviado ao e-mail informado em até 24 horas após o pagamento aprovado e o envio completo e correto dos dados. Você poderá guardar, compartilhar e imprimir o arquivo para uso pessoal.</p></details>
       </div></section>
 
       <section className="manifestoClosing" aria-label="Essência do Meu Primeiro Céu"><p>Seu primeiro <span className="titleSky">céu</span> é apenas o começo.</p><h2>Cada <span className="titleSky">céu</span> é único.<br />Cada criança também.</h2><strong>O <span className="titleSky">céu</span> conta pistas. A criança escreve a história.</strong></section>

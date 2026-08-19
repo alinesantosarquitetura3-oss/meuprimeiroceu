@@ -105,7 +105,6 @@ export default function Home() {
         </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2 id="meaning-title">Descobrir antes de definir. Celebrar antes de comparar.</h2><p className="muted">Um convite para observar com mais curiosidade, presença e delicadeza — sem determinismo, linguagem pesada ou rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
-          <a className="button action inlineCta" href="#storybooks">Comparar Storybook Light e Plus</a>
         </div>
       </section>
 

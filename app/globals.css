@@ -251,8 +251,6 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .benefits strong, .benefits span { display: block; }
 .benefits strong { font-size: 18px; }
 .benefits span { max-width: 220px; margin-top: 5px; color: rgba(17, 10, 49, .7); font-size: 14px; }
-.inlineCta { margin-top: 30px; }
-
 .pricing {
   position: relative; overflow: hidden; padding: 82px max(40px, calc((100vw - 1180px)/2));
   background: linear-gradient(rgba(17, 10, 49, .82), rgba(17, 10, 49, .95)), url('/assets/media/fundo2.jpg') center 58%/cover no-repeat;

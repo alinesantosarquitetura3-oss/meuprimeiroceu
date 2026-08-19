@@ -130,6 +130,7 @@ export default function Home() {
         <img className="cosmicSymbol stepsPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Do nascimento ao livro</p><h2>Como funciona em 3 passos</h2></div>
         <div className="steps"><article><b>1</b><h3>Escolha a Versão Light ou Plus</h3><p>Selecione 8 ou 16 páginas conforme a profundidade desejada.</p></article><article><b>2</b><h3>Informe os dados durante o pagamento</h3><p>Preencha o formulário seguro com o primeiro nome, a data, a hora exata e o local de nascimento.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
+        <div className="sectionCta"><a className="button action" href="#storybooks">Quero escolher a versão do meu Storybook</a></div>
       </section>
 
       <section className="brandManifesto" aria-labelledby="manifesto-title">

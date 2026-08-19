@@ -83,6 +83,7 @@ export default function Home() {
 
       <section className="personalization" aria-labelledby="personalization-title">
         <div className="sectionTitle"><p className="eyebrow">Personalização que você consegue ver</p><h2 id="personalization-title">Nenhum <span className="titleSky">céu</span> se repete. Nenhum Storybook também.</h2><p>Não mudamos apenas o nome. A leitura, os temas, a linguagem e a direção visual acompanham a idade e o mapa de cada pessoa.</p></div>
+        <p className="ageInstruction">Clique em uma faixa etária para ver o estilo do Storybook.</p>
         <div className="ageTabs" role="tablist" aria-label="Exemplos por faixa etária">
           {(Object.keys(ageExamples) as Age[]).map((key) => <button key={key} role="tab" aria-selected={age === key} className={age === key ? "active" : ""} onClick={() => setAge(key)}>{ageExamples[key].label}</button>)}
         </div>

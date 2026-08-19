@@ -165,7 +165,9 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 
 .personalization { padding: 88px max(40px, calc((100vw - 1180px)/2)); background: radial-gradient(circle at 12% 16%, rgba(100,224,226,.38), transparent 28%), radial-gradient(circle at 88% 78%, rgba(212,107,187,.28), transparent 32%), linear-gradient(145deg, #e4dcf3, #cfe7ec 48%, #f4d6e4); color: var(--blue); }
 .personalization .titleSky { text-shadow: 0 3px 0 #293E7D, 0 6px 12px rgba(41, 62, 125, .32); }
+.personalization .sectionTitle { margin-bottom: 20px; }
 .personalization .sectionTitle > p:last-child { color: rgba(17,10,49,.68); }
+.ageInstruction { margin: 0 auto 18px; color: rgba(17,10,49,.78); font-size: 14px; font-weight: 700; text-align: center; }
 .ageTabs { display: flex; justify-content: center; gap: 10px; margin: 0 auto 16px; }
 .ageTabs button { min-width: 140px; padding: 12px 22px; border: 1px solid rgba(17,10,49,.22); border-radius: 99px; background: transparent; color: var(--blue); font: 700 15px Futura, sans-serif; cursor: pointer; }
 .ageTabs button.active { border-color: var(--blue); background: var(--blue); color: white; box-shadow: 0 9px 20px rgba(17,10,49,.18); }

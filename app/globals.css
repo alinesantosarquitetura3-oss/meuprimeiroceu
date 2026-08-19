@@ -31,12 +31,11 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .muted { color: rgba(255, 255, 255, .74); }
 
 .siteHeader {
-  min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  min-height: 96px; display: flex; align-items: center; justify-content: center; gap: 28px;
   padding: 14px max(24px, calc((100vw - 1180px)/2)); border-bottom: 1px solid rgba(255,255,255,.1);
   background: var(--logo-background-dark);
 }
 .siteHeader img { display: block; width: 250px; height: auto; }
-.headerCta { min-height: 44px; padding-inline: 22px; font-size: 14px; }
 
 .openingHero {
   position: relative; width: 100%; overflow: hidden;
@@ -151,6 +150,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 }
 .productMockup:hover img { transform: rotate(0) translateY(-5px); }
 .productMockup p { margin: 14px 0 0; color: rgba(255, 255, 255, .58); font-size: 12px; }
+.visualCta { display: flex; width: fit-content; margin: 24px auto 0; }
 .mockupSpark { position: absolute; z-index: 2; color: var(--yellow); text-shadow: 0 0 20px rgba(253, 194, 43, .9); }
 .mockupSparkOne { top: 5%; left: 3%; font-size: 32px; }
 .mockupSparkTwo { right: 2%; bottom: 18%; font-size: 20px; }
@@ -166,7 +166,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .personalization .titleSky { text-shadow: 0 3px 0 #293E7D, 0 6px 12px rgba(41, 62, 125, .32); }
 .personalization .sectionTitle { margin-bottom: 20px; }
 .personalization .sectionTitle > p:last-child { color: rgba(17,10,49,.68); }
-.ageInstruction { margin: 0 auto 18px; color: rgba(17,10,49,.78); font-size: 14px; font-weight: 700; text-align: center; }
+.ageInstruction { margin: 0 auto 18px; color: var(--pink); font-size: 14px; font-weight: 700; text-align: center; }
 .ageTabs { display: flex; justify-content: center; gap: 10px; margin: 0 auto 16px; }
 .ageTabs button { min-width: 140px; padding: 12px 22px; border: 1px solid rgba(17,10,49,.22); border-radius: 99px; background: transparent; color: var(--blue); font: 700 15px Futura, sans-serif; cursor: pointer; }
 .ageTabs button.active { border-color: var(--blue); background: var(--blue); color: white; box-shadow: 0 9px 20px rgba(17,10,49,.18); }
@@ -252,7 +252,6 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .benefits strong, .benefits span { display: block; }
 .benefits strong { font-size: 18px; }
 .benefits span { max-width: 220px; margin-top: 5px; color: rgba(17, 10, 49, .7); font-size: 14px; }
-.meaningCta { margin-top: 28px; }
 .pricing {
   position: relative; overflow: hidden; padding: 82px max(40px, calc((100vw - 1180px)/2));
   background: linear-gradient(rgba(17, 10, 49, .82), rgba(17, 10, 49, .95)), url('/assets/media/fundo2.jpg') center 58%/cover no-repeat;
@@ -417,7 +416,6 @@ footer a { color: var(--aqua); }
   body { font-size: 16px; }
   .siteHeader { min-height: 78px; padding: 10px 20px; }
   .siteHeader img { width: 190px; }
-  .headerCta { min-height: 40px; padding-inline: 16px; font-size: 12px; }
   .openingHero img {
     width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center top;
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 79%, rgba(0,0,0,.96) 83%, rgba(0,0,0,.74) 89%, rgba(0,0,0,.36) 95%, transparent 100%);

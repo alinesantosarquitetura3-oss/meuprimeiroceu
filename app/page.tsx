@@ -2,12 +2,6 @@
 
 import { useState } from "react";
 
-const plans = {
-  light: { name: "Meu Primeiro Céu Light", short: "Light", pages: "8 páginas", price: "R$ 69,90" },
-  plus: { name: "Meu Primeiro Céu Plus", short: "Plus", pages: "16 páginas", price: "R$ 129,90" },
-} as const;
-type Plan = keyof typeof plans;
-
 const ageExamples = {
   bebe: {
     label: "Bebê",
@@ -28,12 +22,7 @@ const ageExamples = {
 type Age = keyof typeof ageExamples;
 
 export default function Home() {
-  const [plan, setPlan] = useState<Plan>("plus");
   const [age, setAge] = useState<Age>("bebe");
-  const choose = (value: Plan) => {
-    setPlan(value);
-    window.requestAnimationFrame(() => document.getElementById("pedido")?.scrollIntoView({ behavior: "smooth", block: "start" }));
-  };
 
   return (
     <main>
@@ -41,7 +30,6 @@ export default function Home() {
         <a href="#inicio" aria-label="Meu Primeiro Céu — início">
           <img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
         </a>
-        <a className="button action headerCta" href="#storybooks">Comprar meu Storybook</a>
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -84,10 +72,10 @@ export default function Home() {
             </div></div><div className="laptopBase" aria-hidden="true"><span /></div>
           </div>
           <p><strong>O Céu de Breno</strong><span>Exemplo visual de personalidade, emoções, talentos e formas de acolher.</span></p>
+          <a className="button action visualCta" href="#storybooks">Quero conhecer meu filho agora</a>
         </div>
         <div><p className="eyebrow">Astrologia que aproxima</p><h2 id="meaning-title">Descobrir antes de definir. Celebrar antes de comparar.</h2><p className="muted">Um convite para observar com mais curiosidade, presença e delicadeza — sem determinismo, linguagem pesada ou rótulos.</p>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
-          <a className="button action meaningCta" href="#storybooks">Quero conhecer meu filho agora</a>
         </div>
       </section>
 
@@ -95,8 +83,8 @@ export default function Home() {
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da leitura</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> único.</h2><p>Light apresenta o essencial. Plus dobra o número de páginas e aprofunda a leitura para acompanhar o crescimento.</p></div>
         <div className="priceGrid">
-          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button type="button" className="button action" aria-pressed={plan === "light"} onClick={() => choose("light")}>Comprar meu Storybook</button></article>
-          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><button type="button" className="button action" aria-pressed={plan === "plus"} onClick={() => choose("plus")}>Comprar meu Storybook</button></article>
+          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><a className="button action" href="https://kiwify.app/PsA2JjF">Comprar Meu Primeiro Céu Light</a></article>
+          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><a className="button action" href="https://pay.kiwify.com.br/n7HsmFu">Comprar Meu Primeiro Céu Plus</a></article>
         </div>
         <div className="planComparison" aria-label="Comparação entre Light e Plus">
           <div className="comparisonHead"><span>O que muda</span><strong>Light</strong><strong>Plus</strong></div>
@@ -120,6 +108,7 @@ export default function Home() {
           <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
           <img src="/assets/media/mockup-livro-breno-transparent.webp" alt="Representação do Storybook personalizado O Céu de Breno" />
           <p>Representação artística · produto entregue em PDF de alta qualidade</p>
+          <a className="button action visualCta" href="#storybooks">Comprar meu Storybook</a>
         </div>
         <div className="productDesireCopy">
           <p className="eyebrow">Uma história que começa no nascimento</p>
@@ -127,7 +116,6 @@ export default function Home() {
           <p>Cada página transforma símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender: um retrato simbólico para a família observar, sentir e guardar.</p>
           <div className="desireProof" aria-label="Características do Storybook"><span>Apenas o primeiro nome</span><span>Arte adequada à idade</span><span>8 ou 16 páginas</span></div>
           <div className="digitalValue"><strong>Um livro digital pensado para ser guardado como livro.</strong><span>Leia no celular, compartilhe com pessoas importantes e imprima quando quiser.</span></div>
-          <a className="button action" href="#storybooks">Comprar meu Storybook</a>
         </div>
       </section>
 

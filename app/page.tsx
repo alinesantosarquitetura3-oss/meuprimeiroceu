@@ -32,6 +32,7 @@ export default function Home() {
   const [age, setAge] = useState<Age>("bebe");
   const choose = (value: Plan) => {
     setPlan(value);
+    window.requestAnimationFrame(() => document.getElementById("pedido")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
   return (
@@ -40,7 +41,7 @@ export default function Home() {
         <a href="#inicio" aria-label="Meu Primeiro Céu — início">
           <img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
         </a>
-        <a className="headerLink" href="#storybooks">Conhecer as versões</a>
+        <a className="button action headerCta" href="#storybooks">Comprar meu Storybook</a>
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
@@ -49,7 +50,7 @@ export default function Home() {
           <h1 id="hero-title">Transforme o céu do nascimento da sua criança em uma história sobre quem ela é.</h1>
           <p className="lead"><strong>Um storybook personalizado para descobrir, compreender e guardar.</strong></p>
           <p className="heroDefinition">Não é um relatório técnico. É uma história personalizada para a família compreender, guardar e revisitar.</p>
-          <div className="actions"><a className="button action" href="#storybooks">Escolher meu Storybook</a><a href="#como">Ver como funciona</a></div>
+          <div className="actions"><a className="button action" href="#storybooks">Eu quero o Meu Primeiro Céu</a><a href="#como">Ver como funciona</a></div>
           <ul className="trust"><li>Livro digital em alta qualidade</li><li>Pistas, não previsões</li><li>Entrega em até 24 horas*</li></ul>
           <p className="trustFootnote">*Após o pagamento aprovado e o envio completo e correto dos dados.</p>
           <div className="introFilm" aria-label="Uma viagem pelas páginas do Storybook">
@@ -76,7 +77,7 @@ export default function Home() {
           <p>Cada página transforma símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender: um retrato simbólico para a família observar, sentir e guardar.</p>
           <div className="desireProof" aria-label="Características do Storybook"><span>Apenas o primeiro nome</span><span>Arte adequada à idade</span><span>8 ou 16 páginas</span></div>
           <div className="digitalValue"><strong>Um livro digital pensado para ser guardado como livro.</strong><span>Leia no celular, compartilhe com pessoas importantes e imprima quando quiser.</span></div>
-          <a className="button action" href="#storybooks">Conhecer Light e Plus</a>
+          <a className="button action" href="#storybooks">Comprar meu Storybook</a>
         </div>
       </section>
 
@@ -112,8 +113,8 @@ export default function Home() {
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da leitura</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> único.</h2><p>Light apresenta o essencial. Plus dobra o número de páginas e aprofunda a leitura para acompanhar o crescimento.</p></div>
         <div className="priceGrid">
-          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button className="button secondary" onClick={() => choose("light")}>Escolher Light</button></article>
-          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><button className="button action" onClick={() => choose("plus")}>Escolher Plus</button></article>
+          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><button type="button" className="button action" aria-pressed={plan === "light"} onClick={() => choose("light")}>Eu quero o Light</button></article>
+          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><button type="button" className="button action" aria-pressed={plan === "plus"} onClick={() => choose("plus")}>Eu quero o Plus</button></article>
         </div>
         <div className="planComparison" aria-label="Comparação entre Light e Plus">
           <div className="comparisonHead"><span>O que muda</span><strong>Light</strong><strong>Plus</strong></div>
@@ -160,7 +161,7 @@ export default function Home() {
 
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Escolha, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comparar Storybook Light e Plus</a></div>
+        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Escolha, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><div className="selected" aria-live="polite"><span>Sua escolha</span><strong>{plans[plan].name}</strong><p>{plans[plan].pages} · {plans[plan].price}</p></div><a className="button action orderReturn" href="#storybooks">Comprar meu Storybook</a></div>
         <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
       </section>
 

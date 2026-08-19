@@ -36,7 +36,7 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
   background: var(--logo-background-dark);
 }
 .siteHeader img { display: block; width: 250px; height: auto; }
-.headerLink { color: var(--cream); font-size: 14px; font-weight: 700; text-underline-offset: 5px; }
+.headerCta { min-height: 44px; padding-inline: 22px; font-size: 14px; }
 
 .openingHero {
   position: relative; width: 100%; overflow: hidden;
@@ -419,7 +419,7 @@ footer a { color: var(--aqua); }
   body { font-size: 16px; }
   .siteHeader { min-height: 78px; padding: 10px 20px; }
   .siteHeader img { width: 190px; }
-  .headerLink { font-size: 12px; }
+  .headerCta { min-height: 40px; padding-inline: 16px; font-size: 12px; }
   .openingHero img {
     width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center top;
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 79%, rgba(0,0,0,.96) 83%, rgba(0,0,0,.74) 89%, rgba(0,0,0,.36) 95%, transparent 100%);

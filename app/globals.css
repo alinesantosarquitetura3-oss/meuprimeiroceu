@@ -276,6 +276,8 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
 .priceCard li { padding: 8px 0; font-size: 15px; }
 .priceCard > .button { box-shadow: 0 14px 28px rgba(9, 5, 29, .28), 0 5px 0 rgba(217, 163, 0, .72); }
 .priceCard > .button:hover { box-shadow: 0 17px 32px rgba(9, 5, 29, .34), 0 5px 0 rgba(217, 163, 0, .82); }
+.purchaseConfidence { position: relative; z-index: 1; width: min(980px, 100%); margin: 26px auto 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 24px; padding: 16px 22px; border: 1px solid rgba(100,224,226,.42); border-radius: 18px; background: rgba(9,5,29,.74); color: var(--cream); font-size: 14px; text-align: center; }
+.purchaseConfidence span { white-space: nowrap; }
 .planComparison { position: relative; z-index: 1; width: min(980px, 100%); margin: 48px auto 0; overflow: hidden; border: 1px solid rgba(255,255,255,.3); border-radius: 24px; background: rgba(9,5,29,.82); }
 .planComparison > div { display: grid; grid-template-columns: 1.5fr .75fr .75fr; border-top: 1px solid rgba(255,255,255,.14); }
 .planComparison > div:first-child { border-top: 0; background: rgba(253,194,43,.13); }
@@ -337,6 +339,7 @@ form { padding: 38px; border: 1px solid var(--light); border-radius: 30px; backg
 .afterPurchase li::before { content: '✦'; position: absolute; left: 0; color: var(--pink); }
 .privacyMini { margin: 24px 0 18px; padding: 18px; border-left: 5px solid var(--aqua); border-radius: 0 14px 14px 0; background: rgba(100,224,226,.12); }
 .privacyMini p, .deadlineNote { margin: 5px 0 0; font-size: 14px; }
+.privacyMini a { display: inline-block; margin-top: 11px; color: #174c79; font-size: 14px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
 .deadlineNote { color: rgba(17,10,49,.72); }
 .checkoutPending { display: block; margin-top: 10px; color: rgba(17,10,49,.56); text-align: center; }
 fieldset { margin: 0 0 30px; padding: 0; border: 0; }
@@ -398,6 +401,20 @@ footer a { color: var(--aqua); }
 .legalIdentity { display: grid; gap: 3px; color: rgba(255,255,255,.72); font-size: 14px; }
 .legalIdentity strong { color: var(--cream); }
 .legalIdentity small { color: rgba(255,255,255,.46); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+
+.privacyPage { min-height: 100vh; background: linear-gradient(160deg, #080516, var(--blue) 45%, #1c2c64); color: var(--light); }
+.privacyHeader { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 18px max(28px, calc((100vw - 960px)/2)); border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(8,5,22,.84); }
+.privacyHeader img { display: block; width: min(250px, 48vw); height: auto; }
+.privacyBack { color: var(--aqua); font-weight: 700; }
+.privacyContent { width: min(860px, calc(100% - 40px)); margin: 0 auto; padding: 76px 0 100px; }
+.privacyContent h1 { max-width: 760px; margin: 8px 0 12px; font-size: clamp(42px, 7vw, 70px); }
+.privacyUpdated { margin: 0 0 34px; color: rgba(255,255,255,.58); font-size: 14px; }
+.privacyContent > p:not(.eyebrow):not(.privacyUpdated) { color: rgba(255,255,255,.8); font-size: 19px; }
+.privacyContent section { margin-top: 42px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.16); }
+.privacyContent h2 { margin: 0 0 14px; color: var(--cream); font-size: clamp(26px, 4vw, 34px); }
+.privacyContent p, .privacyContent li { color: rgba(255,255,255,.76); line-height: 1.7; }
+.privacyContent li + li { margin-top: 8px; }
+.privacyContent a { color: var(--aqua); text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; }
@@ -488,10 +505,14 @@ footer a { color: var(--aqua); }
   .planComparison { overflow-x: auto; }
   .planComparison > div { min-width: 590px; }
   .priceCard { padding: 32px 24px; }
+  .purchaseConfidence { align-items: stretch; flex-direction: column; gap: 8px; }
+  .purchaseConfidence span { white-space: normal; }
   .laptopScreen { padding: 10px 10px 12px; border-radius: 14px 14px 6px 6px; }
   .storybookPreview > p { margin-left: 0; }
   .order { width: calc(100% - 20px); padding: 38px 16px; }
   .orderTitle { font-size: clamp(32px, 9vw, 39px); letter-spacing: -.035em; }
+  .privacyHeader { align-items: flex-start; flex-direction: column; gap: 10px; padding: 16px 20px; }
+  .privacyContent { padding-top: 52px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

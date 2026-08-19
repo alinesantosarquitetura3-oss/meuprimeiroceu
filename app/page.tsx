@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { AttributionCapture, CheckoutLink } from "./components/AttributionLink";
+import LazyVideo from "./components/LazyVideo";
 
 const ageExamples = {
   bebe: {
@@ -26,6 +28,7 @@ export default function Home() {
 
   return (
     <main>
+      <AttributionCapture />
       <header className="siteHeader" id="inicio">
         <a href="#inicio" aria-label="Meu Primeiro Céu — início">
           <img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu — O livro do céu da criança" />
@@ -42,9 +45,7 @@ export default function Home() {
           <ul className="trust"><li>Livro digital em alta qualidade</li><li>Mapa astral infantil personalizado e ilustrado</li><li>Entrega em até 24 horas</li></ul>
           <div className="introFilm" aria-label="Uma viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
-            <video autoPlay muted loop playsInline preload="metadata" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Vídeo demonstrativo das páginas de O Céu de Breno">
-              <source src="/assets/media/video-primeira-dobra-breno.mp4" type="video/mp4" />
-            </video>
+            <LazyVideo eager src="/assets/media/video-primeira-dobra-breno-optimized.mp4" poster="/assets/media/ceu-de-breno-poster.jpg" label="Vídeo demonstrativo das páginas de O Céu de Breno" />
           </div>
         </div>
       </section>
@@ -67,7 +68,7 @@ export default function Home() {
         <div className="storybookPreview">
           <div className="laptop" aria-label="Mockup de laptop exibindo o Storybook O Céu de Breno">
             <div className="laptopScreen"><div className="camera" aria-hidden="true" /><div className="videoFrame">
-              <video autoPlay muted loop playsInline preload="metadata" poster="/assets/media/ceu-de-breno-poster.jpg" aria-label="Prévia demonstrativa do Storybook O Céu de Breno"><source src="/assets/media/ceu-de-breno-scroll.mp4" type="video/mp4" /></video>
+              <LazyVideo src="/assets/media/ceu-de-breno-scroll-optimized.mp4" poster="/assets/media/ceu-de-breno-poster.jpg" label="Prévia demonstrativa do Storybook O Céu de Breno" />
               <span className="videoBadge">Exemplo demonstrativo</span>
             </div></div><div className="laptopBase" aria-hidden="true"><span /></div>
           </div>
@@ -83,9 +84,10 @@ export default function Home() {
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da leitura</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> único.</h2><p>Light apresenta o essencial. Plus dobra o número de páginas e aprofunda a leitura para acompanhar o crescimento.</p></div>
         <div className="priceGrid">
-          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><a className="button action" href="https://pay.kiwify.com.br/gRzmrYC">Comprar Meu Primeiro Céu Light</a></article>
-          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><a className="button action" href="https://pay.kiwify.com.br/n7HsmFu">Comprar Meu Primeiro Céu Plus</a></article>
+          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/gRzmrYC" product="Light" value={69.9}>Comprar Meu Primeiro Céu Light</CheckoutLink></article>
+          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/n7HsmFu" product="Plus" value={129.9}>Comprar Meu Primeiro Céu Plus</CheckoutLink></article>
         </div>
+        <div className="purchaseConfidence" aria-label="Segurança e suporte da compra"><span>✓ Pagamento seguro pela Kiwify</span><span>✓ Storybook revisado antes do envio</span><span>✓ Erros de produção corrigidos sem custo</span></div>
         <div className="planComparison" aria-label="Comparação entre Light e Plus">
           <div className="comparisonHead"><span>O que muda</span><strong>Light</strong><strong>Plus</strong></div>
           <div><span>Extensão</span><b>8 páginas</b><b>16 páginas</b></div>
@@ -152,7 +154,7 @@ export default function Home() {
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
         <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Escolha, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comprar meu Storybook</a></div>
-        <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
+        <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p><p>Ao enviar os dados, a pessoa compradora confirma ser pai, mãe, responsável legal ou estar autorizada pelo responsável.</p><a href="/privacidade" target="_blank" rel="noreferrer">Leia a Política de Privacidade e LGPD</a></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
       </section>
 
       <section className="section faq"><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
@@ -173,6 +175,7 @@ export default function Home() {
         <p>Uma história sobre singularidade, possibilidades e maneiras únicas de sentir o mundo.</p>
         <div className="legalIdentity"><strong>AS Marketing e Eventos LTDA</strong><span>CNPJ: 63.488.927/0001-32</span><span>Rua do Parque, 361, Jardim Atlântico — Goiânia — GO</span><small>Endereço fiscal</small></div>
         <a href="mailto:omeuceuinterior@gmail.com">omeuceuinterior@gmail.com</a>
+        <a href="/privacidade" target="_blank" rel="noreferrer">Política de Privacidade e LGPD</a>
         <small>© 2026 Meu Primeiro Céu. Todos os direitos reservados.</small>
       </footer>
     </main>

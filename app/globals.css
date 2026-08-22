@@ -258,11 +258,13 @@ h1 { font-size: clamp(50px, 5.4vw, 80px); }
   color: white;
 }
 .priceGrid { position: relative; z-index: 1; width: min(980px, 100%); margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.priceGrid.singlePlan { width: min(640px, 100%); grid-template-columns: 1fr; }
 .priceCard {
   position: relative; display: flex; flex-direction: column; padding: 42px;
   border: 2px solid rgba(100,224,226,.7); border-radius: 30px; background: linear-gradient(145deg, #dff8f5, #b8e8ec 62%, #d3c9f4); color: var(--blue);
 }
 .priceCard.featured { border-color: var(--yellow); background: linear-gradient(145deg, #fff0b9, #ffd977 58%, #f5b9d9); box-shadow: var(--shadow); transform: translateY(-12px); }
+.singlePlan .priceCard.featured { transform: none; }
 .popular {
   position: absolute; top: -17px; right: 30px; padding: 7px 16px; border-radius: 99px;
   background: var(--yellow); color: var(--blue); font-size: 12px; text-transform: uppercase; letter-spacing: .07em;

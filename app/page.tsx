@@ -82,20 +82,11 @@ export default function Home() {
 
       <section className="pricing" id="storybooks">
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
-        <div className="sectionTitle"><p className="eyebrow">Escolha a profundidade da leitura</p><h2>Dois Storybooks. O mesmo <span className="titleSky">céu</span> único.</h2><p>Light apresenta o essencial. Plus dobra o número de páginas e aprofunda a leitura para acompanhar o crescimento.</p></div>
-        <div className="priceGrid">
-          <article className="priceCard"><p className="label">Leitura essencial</p><h3>Meu Primeiro Céu Light</h3><p>8 páginas personalizadas</p><strong className="price">R$ 69,90</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional</li><li>Talentos e formas de expressão</li><li>Orientações leves para a família</li><li>PDF digital personalizado</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/gRzmrYC" product="Light" value={69.9}>Comprar Meu Primeiro Céu Light</CheckoutLink></article>
-          <article className="priceCard featured"><span className="popular">Leitura aprofundada</span><p className="label">Para acompanhar o crescimento</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 129,90</strong><small>pagamento único</small><ul><li>Tudo o que está no Light</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/n7HsmFu" product="Plus" value={129.9}>Comprar Meu Primeiro Céu Plus</CheckoutLink></article>
+        <div className="sectionTitle"><p className="eyebrow">Uma única versão, completa</p><h2>Tudo o que o <span className="titleSky">céu</span> da sua criança merece.</h2><p>O Meu Primeiro Céu Plus reúne a leitura aprofundada e a experiência visual completa em um Storybook de 16 páginas.</p></div>
+        <div className="priceGrid singlePlan">
+          <article className="priceCard featured"><span className="popular">Versão completa</span><p className="label">Para descobrir e acompanhar</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 97,00</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional e talentos</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li><li>PDF digital personalizado</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/n7HsmFu" product="Plus" value={97}>Comprar Meu Primeiro Céu Plus</CheckoutLink></article>
         </div>
         <div className="purchaseConfidence" aria-label="Segurança e suporte da compra"><span>✓ Pagamento seguro pela Kiwify</span><span>✓ Storybook revisado antes do envio</span><span>✓ Erros de produção corrigidos sem custo</span></div>
-        <div className="planComparison" aria-label="Comparação entre Light e Plus">
-          <div className="comparisonHead"><span>O que muda</span><strong>Light</strong><strong>Plus</strong></div>
-          <div><span>Extensão</span><b>8 páginas</b><b>16 páginas</b></div>
-          <div><span>Proposta</span><b>Primeira descoberta</b><b>Visão aprofundada</b></div>
-          <div><span>Personalidade, emoções e talentos</span><b>Incluído</b><b>Incluído</b></div>
-          <div><span>Comunicação, vínculos, energia e desafios</span><b>—</b><b>Incluído</b></div>
-          <div><span>Mapa astral e síntese prática</span><b>—</b><b>Incluído</b></div>
-        </div>
         <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
           <article className="noticeCritical"><span className="noticeIcon" aria-hidden="true">✓</span><div><h3>Para criar um Storybook fiel ao céu do nascimento</h3><p>Você precisará da <strong>hora exata registrada</strong> na certidão de nascimento ou na Declaração de Nascido Vivo. Ela torna a leitura precisa e personalizada. <strong>Já tem essa informação? Ela é imprescindível para gerar o livro 100% correto.</strong></p><small>Ainda não encontrou a hora? Consulte o documento antes de concluir a compra.</small></div></article>
           <article><span className="noticeIcon" aria-hidden="true">✦</span><div><h3>Cada Storybook possui uma arte única</h3><p>As imagens desta página são ilustrativas. Personagens, elementos celestes, enquadramentos e composições poderão variar, mas serão sempre preservados o <strong>estilo aquarelado</strong>, a <strong>atmosfera celestial</strong> e a <strong>paleta de cores da opção escolhida</strong>.</p></div></article>
@@ -116,7 +107,7 @@ export default function Home() {
           <p className="eyebrow">Uma história que começa no nascimento</p>
           <h2 id="product-desire-title">O primeiro <span className="titleSky">céu</span> transformado em uma história sobre quem seu filho está se tornando.</h2>
           <p>Cada página transforma símbolos, planetas e posições em uma narrativa delicada, visual e fácil de compreender: um retrato simbólico para a família observar, sentir e guardar.</p>
-          <div className="desireProof" aria-label="Características do Storybook"><span>Apenas o primeiro nome</span><span>Arte adequada à idade</span><span>8 ou 16 páginas</span></div>
+          <div className="desireProof" aria-label="Características do Storybook"><span>Apenas o primeiro nome</span><span>Arte adequada à idade</span><span>16 páginas personalizadas</span></div>
           <div className="digitalValue"><strong>Um livro digital pensado para ser guardado como livro.</strong><span>Leia no celular, compartilhe com pessoas importantes e imprima quando quiser.</span></div>
         </div>
       </section>
@@ -131,8 +122,8 @@ export default function Home() {
       <section className="section cosmicSteps" id="como">
         <img className="cosmicSymbol stepsPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Do nascimento ao livro</p><h2>Como funciona em 3 passos</h2></div>
-        <div className="steps"><article><b>1</b><h3>Escolha a Versão Light ou Plus</h3><p>Selecione 8 ou 16 páginas conforme a profundidade desejada.</p></article><article><b>2</b><h3>Informe os dados durante o pagamento</h3><p>Preencha o formulário seguro com o primeiro nome, a data, a hora exata e o local de nascimento.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
-        <div className="sectionCta"><a className="button action" href="#storybooks">Quero escolher a versão do meu Storybook</a></div>
+        <div className="steps"><article><b>1</b><h3>Garanta o Meu Primeiro Céu Plus</h3><p>Uma versão completa, com 16 páginas personalizadas e leitura aprofundada.</p></article><article><b>2</b><h3>Informe os dados durante o pagamento</h3><p>Preencha o formulário seguro com o primeiro nome, a data, a hora exata e o local de nascimento.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
+        <div className="sectionCta"><a className="button action" href="#storybooks">Quero meu Storybook agora</a></div>
       </section>
 
       <section className="brandManifesto" aria-labelledby="manifesto-title">
@@ -153,13 +144,13 @@ export default function Home() {
 
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Escolha, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comprar meu Storybook</a></div>
+        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Compre, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comprar meu Storybook</a></div>
         <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p><p>Ao enviar os dados, a pessoa compradora confirma ser pai, mãe, responsável legal ou estar autorizada pelo responsável.</p><a href="/privacidade" target="_blank" rel="noreferrer">Leia a Política de Privacidade e LGPD</a></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
       </section>
 
       <section className="section faq"><div className="sectionTitle"><p className="eyebrow">Dúvidas antes da viagem</p><h2>Perguntas frequentes</h2></div><div className="faqList">
         <details><summary>Preciso entender de astrologia?</summary><p>Não. O texto é feito para famílias leigas, com linguagem leve e sem excesso de termos técnicos.</p></details>
-        <details><summary>Qual é a diferença entre Light e Plus?</summary><p>O Light tem 8 páginas e apresenta os aspectos essenciais. O Plus tem 16 páginas e aprofunda comunicação, vínculos, energia, desafios e a síntese do mapa.</p></details>
+        <details><summary>O que está incluído no Meu Primeiro Céu Plus?</summary><p>São 16 páginas personalizadas com forças da personalidade, universo emocional, talentos, comunicação, vínculos, energia, desafios, mapa astral, síntese prática e arte adaptada à faixa etária.</p></details>
         <details><summary>Posso comprar para bebê, criança ou adolescente?</summary><p>Sim. A leitura e a direção visual são adaptadas à faixa etária.</p></details>
         <details><summary>Posso comprar para alguém nascido fora do Brasil?</summary><p>Sim. Informe o horário local e o local completo do nascimento.</p></details>
         <details><summary>Onde encontro a hora exata?</summary><p>Geralmente ela aparece na certidão de nascimento ou na Declaração de Nascido Vivo. Se não estiver com o documento em mãos, localize essa informação antes de concluir o pedido.</p></details>

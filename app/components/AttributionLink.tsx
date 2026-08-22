@@ -29,7 +29,7 @@ export function AttributionCapture() {
 
 export function CheckoutLink({ href, product, value, className, children }: {
   href: string;
-  product: "Light" | "Plus";
+  product: "Plus";
   value: number;
   className?: string;
   children: ReactNode;

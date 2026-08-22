@@ -16,10 +16,9 @@ const productSchema = {
   "@context": "https://schema.org", "@type": "Product", name: "Meu Primeiro Céu",
   description: "Livro astrológico digital e personalizado para bebês, crianças e adolescentes.",
   brand: { "@type": "Brand", name: "Meu Primeiro Céu" },
-  offers: [
-    { "@type": "Offer", name: "Meu Primeiro Céu Light", price: "69.90", priceCurrency: "BRL", availability: "https://schema.org/PreOrder" },
-    { "@type": "Offer", name: "Meu Primeiro Céu Plus", price: "129.90", priceCurrency: "BRL", availability: "https://schema.org/PreOrder" },
-  ],
+  offers: {
+    "@type": "Offer", name: "Meu Primeiro Céu Plus", price: "97.00", priceCurrency: "BRL", availability: "https://schema.org/PreOrder",
+  },
 };
 
 export default function RootLayout({children}:{children:React.ReactNode}) {

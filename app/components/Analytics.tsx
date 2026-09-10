@@ -18,10 +18,18 @@ export default function Analytics() {
 
     const metaId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
     if (metaId) {
-      const win = window as typeof window & { fbq?: ((...args: unknown[]) => void) & { queue?: unknown[]; loaded?: boolean; version?: string } };
+      type MetaPixel = ((...args: unknown[]) => void) & {
+        queue?: unknown[];
+        loaded?: boolean;
+        version?: string;
+      };
+      const win = window as typeof window & { fbq?: MetaPixel };
       if (!win.fbq) {
-        const fbq = ((...args: unknown[]) => fbq.queue?.push(args)) as typeof win.fbq;
-        if (fbq) { fbq.queue = []; fbq.loaded = true; fbq.version = "2.0"; win.fbq = fbq; }
+        const fbq: MetaPixel = (...args: unknown[]) => fbq.queue?.push(args);
+        fbq.queue = [];
+        fbq.loaded = true;
+        fbq.version = "2.0";
+        win.fbq = fbq;
         const script = document.createElement("script");
         script.async = true;
         script.src = "https://connect.facebook.net/en_US/fbevents.js";

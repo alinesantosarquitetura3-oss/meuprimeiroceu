@@ -41,6 +41,8 @@ export function CheckoutLink({ href, product, value, className, children }: {
     const attribution = readAttribution();
     Object.entries(attribution).forEach(([key, val]) => destination.searchParams.set(key, val));
     destination.searchParams.set("produto", `meu-primeiro-ceu-${product.toLowerCase()}`);
+    // The browser URL is only available after hydration; updating the rendered checkout URL here is intentional.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTrackedHref(destination.toString());
   }, [href, product]);
 

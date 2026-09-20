@@ -3,7 +3,7 @@ import "@fontsource-variable/fraunces/wght.css";
 import "./globals.css";
 import Analytics from "./components/Analytics";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meu-primeiro-ceu.ptd45qrs8w.chatgpt.site"),
+  metadataBase: new URL("https://meu-primeiro-ceu.web.app"),
   title: "Meu Primeiro Céu | Livro astrológico personalizado",
   description: "Livro astrológico digital e personalizado para bebês, crianças e adolescentes, com linguagem leve, arte aquarelada e sem rótulos.",
   alternates: { canonical: "/" },

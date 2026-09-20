@@ -418,6 +418,22 @@ footer a { color: var(--aqua); }
 .privacyContent li + li { margin-top: 8px; }
 .privacyContent a { color: var(--aqua); text-decoration: underline; text-underline-offset: 3px; }
 
+.cookieBanner {
+  position: fixed; z-index: 1000; right: 20px; bottom: 20px; left: 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  max-width: 1040px; margin: 0 auto; padding: 22px 24px;
+  border: 1px solid rgba(255,255,255,.2); border-radius: 20px;
+  background: rgba(8,5,22,.97); box-shadow: 0 18px 60px rgba(0,0,0,.38); color: #fff;
+}
+.cookieBanner strong { color: var(--cream); font-size: 18px; }
+.cookieBanner p { max-width: 680px; margin: 7px 0 5px; color: rgba(255,255,255,.78); font-size: 14px; line-height: 1.5; }
+.cookieBanner a { color: var(--aqua); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+.cookieActions { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; }
+.cookieActions button { border: 0; cursor: pointer; font: inherit; }
+.cookieActions .button { padding: 12px 17px; }
+.cookieSecondary { padding: 11px 4px; background: transparent; color: rgba(255,255,255,.76); text-decoration: underline; text-underline-offset: 3px; }
+.cookieSettings { position: fixed; z-index: 900; left: 12px; bottom: 12px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(8,5,22,.88); color: rgba(255,255,255,.8); cursor: pointer; font: 600 11px/1.2 Arial, sans-serif; }
+
 @media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; }
   .heroCopy { text-align: center; }
@@ -515,6 +531,9 @@ footer a { color: var(--aqua); }
   .orderTitle { font-size: clamp(32px, 9vw, 39px); letter-spacing: -.035em; }
   .privacyHeader { align-items: flex-start; flex-direction: column; gap: 10px; padding: 16px 20px; }
   .privacyContent { padding-top: 52px; }
+  .cookieBanner { align-items: stretch; flex-direction: column; gap: 16px; right: 10px; bottom: 10px; left: 10px; padding: 19px; }
+  .cookieActions { align-items: stretch; flex-direction: column-reverse; }
+  .cookieActions .button, .cookieSecondary { width: 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

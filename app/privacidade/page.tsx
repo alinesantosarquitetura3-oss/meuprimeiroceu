@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade e LGPD | Meu Primeiro Céu",
@@ -10,13 +11,13 @@ export default function PrivacyPage() {
   return (
     <main className="privacyPage">
       <header className="privacyHeader">
-        <a href="/" aria-label="Voltar para Meu Primeiro Céu"><img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu" /></a>
-        <a className="privacyBack" href="/">← Voltar à página de vendas</a>
+        <Link href="/" aria-label="Voltar para Meu Primeiro Céu"><img src="/assets/brand/logo-horizontal.png" alt="Meu Primeiro Céu" /></Link>
+        <Link className="privacyBack" href="/">← Voltar à página de vendas</Link>
       </header>
       <article className="privacyContent">
         <p className="eyebrow">Privacidade desde o início</p>
         <h1>Política de Privacidade e LGPD</h1>
-        <p className="privacyUpdated">Última atualização: 19 de agosto de 2026.</p>
+        <p className="privacyUpdated">Última atualização: 20 de setembro de 2026.</p>
         <p>Esta política explica, de forma clara, como os dados pessoais são tratados para vender, produzir e entregar o Storybook personalizado Meu Primeiro Céu.</p>
 
         <section><h2>1. Quem é responsável pelos dados</h2><p>A controladora dos dados é <strong>AS Marketing e Eventos LTDA</strong>, CNPJ 63.488.927/0001-32, com endereço fiscal na Rua do Parque, 361, Jardim Atlântico, Goiânia — GO. O canal para dúvidas e solicitações relacionadas à privacidade é <a href="mailto:omeuceuinterior@gmail.com">omeuceuinterior@gmail.com</a>.</p></section>
@@ -37,7 +38,7 @@ export default function PrivacyPage() {
 
         <section><h2>9. Segurança e incidentes</h2><p>Adotamos medidas administrativas e técnicas compatíveis com o porte da operação e com a natureza dos dados. Nenhum sistema é totalmente infalível; se ocorrer incidente relevante, serão adotadas as providências previstas na legislação e nas orientações da Autoridade Nacional de Proteção de Dados.</p></section>
 
-        <section><h2>10. Cookies, métricas e links externos</h2><p>A página pode registrar parâmetros de campanha e eventos de navegação para medir a origem das visitas e os cliques de compra. Ferramentas de análise ou publicidade somente serão ativadas quando configuradas. Ao abrir o checkout, passam a valer também as políticas do provedor de pagamento.</p></section>
+        <section><h2>10. Cookies, métricas e links externos</h2><p>A página registra localmente as preferências de privacidade e pode preservar parâmetros de campanha e identificadores de clique para manter a atribuição ao abrir o checkout. Cookies opcionais de medição e publicidade, incluindo o Pixel da Meta, somente são ativados depois que a pessoa escolhe aceitá-los no aviso exibido pela página.</p><p>A escolha pode ser alterada a qualquer momento pelo botão “Preferências de cookies”. Ao abrir o checkout, passam a valer também as políticas da Kiwify e dos respectivos meios de pagamento.</p></section>
 
         <section><h2>11. Alterações desta política</h2><p>Esta política pode ser atualizada para refletir mudanças no serviço ou na legislação. A data da versão mais recente estará sempre indicada no início do documento.</p></section>
       </article>

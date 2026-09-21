@@ -38,10 +38,10 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img className="cosmicSymbol heroStar" src="/assets/decor/simb4-transparent.png" alt="" aria-hidden="true" />
         <div className="heroCopy">
-          <h1 id="hero-title">Transforme o céu do nascimento da sua criança em uma história sobre quem ela é.</h1>
-          <p className="lead"><strong>Um storybook astrológico personalizado para descobrir, compreender e desenvolver os dons e talentos da sua criança.</strong></p>
-          <p className="heroDefinition">Não é um relatório técnico. É uma história personalizada para a família compreender, guardar e revisitar.</p>
-          <div className="actions"><a className="button action" href="#storybooks">Eu quero o Meu Primeiro Céu</a><a href="#como">Ver como funciona</a></div>
+          <p className="eyebrow">Já desejou entender melhor o jeitinho do seu filho?</p>
+          <h1 id="hero-title">Descubra o que o céu do nascimento pode revelar sobre a personalidade, as emoções e os talentos do seu filho.</h1>
+          <p className="lead"><strong>Um Storybook astrológico personalizado de 16 páginas, criado a partir do dia, hora e local em que seu filho nasceu.</strong></p>
+          <div className="actions"><a className="button action" href="#storybooks">Quero criar o céu do meu filho</a><a href="#como">Ver como funciona</a></div>
           <ul className="trust"><li>Livro digital em alta qualidade</li><li>Mapa astral infantil personalizado e ilustrado</li><li>Entrega em até 24 horas</li></ul>
           <div className="introFilm" aria-label="Uma viagem pelas páginas do Storybook">
             <div className="introFilmGlow" aria-hidden="true" />
@@ -50,8 +50,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section questions" aria-labelledby="questions-title">
+        <div className="sectionTitle">
+          <p className="eyebrow">Talvez você já tenha se perguntado…</p>
+          <h2 id="questions-title">Tem coisas sobre seu filho que só aparecem quando você olha com mais curiosidade.</h2>
+        </div>
+        <div className="questionGrid">
+          <blockquote>“Por que meu filho sente algumas coisas tão intensamente?”</blockquote>
+          <blockquote>“Será que existe algum talento nele que eu ainda não percebi?”</blockquote>
+          <blockquote>“Como acolher o jeitinho dele sem tentar encaixá-lo em padrões?”</blockquote>
+          <blockquote>“Será que estou cobrando algo que não combina com quem ele é?”</blockquote>
+          <blockquote>“Como guardar uma lembrança dessa fase que vá além de fotos?”</blockquote>
+        </div>
+        <p className="questionsBridge">Foi para transformar essas perguntas em curiosidade, conexão e memória que nasceu o Meu Primeiro Céu.</p>
+      </section>
+
       <section className="personalization" aria-labelledby="personalization-title">
-        <div className="sectionTitle"><p className="eyebrow">Personalização que você consegue ver</p><h2 id="personalization-title">Nenhum <span className="titleSky">céu</span> se repete. Nenhum Storybook também.</h2><p>Não mudamos apenas o nome. A leitura, os temas, a linguagem e a direção visual acompanham a idade e o mapa de cada pessoa.</p></div>
+        <div className="sectionTitle"><p className="eyebrow">Veja o produto por dentro</p><h2 id="personalization-title">Veja algumas páginas que seu filho poderá receber.</h2><p>Não mudamos apenas o nome. A leitura, os temas, a linguagem e a direção visual acompanham a idade e o mapa de cada criança.</p></div>
+        <div className="contentHighlights" aria-label="Temas que podem aparecer no Storybook"><span>Personalidade</span><span>Emoções</span><span>Talentos</span><span>Comunicação</span><span>Afetos</span><span>Desafios</span><span>Síntese do mapa</span></div>
         <p className="ageInstruction">Clique em uma faixa etária para ver o estilo do Storybook.</p>
         <div className="ageTabs" role="tablist" aria-label="Exemplos por faixa etária">
           {(Object.keys(ageExamples) as Age[]).map((key) => <button key={key} role="tab" aria-selected={age === key} className={age === key ? "active" : ""} onClick={() => setAge(key)}>{ageExamples[key].label}</button>)}
@@ -73,18 +89,19 @@ export default function Home() {
             </div></div><div className="laptopBase" aria-hidden="true"><span /></div>
           </div>
           <p><strong>O Céu de Breno</strong><span>Exemplo visual de personalidade, emoções, talentos e formas de acolher.</span></p>
-          <a className="button action visualCta" href="#storybooks">Quero conhecer meu filho agora</a>
+          <a className="button action visualCta" href="#storybooks">Quero criar o céu do meu filho</a>
         </div>
-        <div><p className="eyebrow">Astrologia que aproxima</p><h2 id="meaning-title">Descobrir antes de definir. Celebrar antes de comparar.</h2><p className="muted">Um convite para observar com mais curiosidade, presença e delicadeza — sem determinismo, linguagem pesada ou rótulos.</p>
+        <div><p className="eyebrow">Veja como um nascimento vira um Storybook</p><h2 id="meaning-title">Dos dados do nascimento às páginas feitas para o seu filho.</h2><p className="muted">O dia, a hora e o local revelam o mapa. A leitura transforma esses símbolos em uma história visual, afetiva e fácil de compreender.</p>
+          <div className="proofFlow" aria-label="Etapas de criação do Storybook"><span>Dados do nascimento</span><b aria-hidden="true">→</b><span>Leitura do mapa</span><b aria-hidden="true">→</b><span>16 páginas personalizadas</span></div>
           <div className="benefits"><div><strong>Afetivo</strong><span>para fortalecer vínculos</span></div><div><strong>Lúdico</strong><span>para tornar o simbólico acessível</span></div><div><strong>Único</strong><span>feito com os dados do nascimento</span></div><div><strong>Prático</strong><span>com percepções para o dia a dia</span></div></div>
         </div>
       </section>
 
       <section className="pricing" id="storybooks">
         <img className="cosmicSymbol pricingPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
-        <div className="sectionTitle"><p className="eyebrow">Uma única versão, completa</p><h2>Tudo o que o <span className="titleSky">céu</span> da sua criança merece.</h2><p>O Meu Primeiro Céu Plus reúne a leitura aprofundada e a experiência visual completa em um Storybook de 16 páginas.</p></div>
+        <div className="sectionTitle"><p className="eyebrow">Uma única versão, completa</p><h2>Não é um modelo genérico com o nome do seu filho.</h2><p>Cada Storybook é criado com os dados reais do nascimento e transformado em uma experiência visual de 16 páginas.</p></div>
         <div className="priceGrid singlePlan">
-          <article className="priceCard featured"><span className="popular">Versão completa</span><p className="label">Para descobrir e acompanhar</p><h3>Meu Primeiro Céu Plus</h3><p>16 páginas personalizadas</p><strong className="price">R$ 97,00</strong><small>pagamento único</small><ul><li>Principais forças da personalidade</li><li>Universo emocional e talentos</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li><li>PDF digital personalizado</li></ul><CheckoutLink className="button action" href="https://pay.kiwify.com.br/n7HsmFu" product="Plus" value={97}>Comprar Meu Primeiro Céu Plus</CheckoutLink></article>
+          <article className="priceCard featured"><span className="popular">Versão completa</span><p className="label">Para descobrir e acompanhar</p><h3>Meu Primeiro Céu Plus</h3><p>Você recebe:</p><ul><li>16 páginas personalizadas</li><li>Principais forças da personalidade</li><li>Universo emocional e talentos</li><li>Comunicação, aprendizado e curiosidade</li><li>Afetos, vínculos e formas de amar</li><li>Energia, iniciativa e desafios</li><li>Mapa astral e síntese prática</li><li>Visual adaptado à faixa etária</li><li>PDF digital em alta qualidade</li></ul><div className="priceOffer"><strong className="price">R$ 97,00</strong><small>pagamento único</small></div><CheckoutLink className="button action" href="https://pay.kiwify.com.br/n7HsmFu" product="Plus" value={97}>Quero criar o céu do meu filho</CheckoutLink></article>
         </div>
         <div className="purchaseConfidence" aria-label="Segurança e suporte da compra"><span>✓ Pagamento seguro pela Kiwify</span><span>✓ Storybook revisado antes do envio</span><span>✓ Erros de produção corrigidos sem custo</span></div>
         <div className="purchaseNotices" aria-label="Informações importantes antes da compra">
@@ -101,7 +118,7 @@ export default function Home() {
           <span className="mockupSpark mockupSparkTwo" aria-hidden="true">✦</span>
           <img src="/assets/media/mockup-livro-breno-transparent.webp" alt="Representação do Storybook personalizado O Céu de Breno" />
           <p>Representação artística · produto entregue em PDF de alta qualidade</p>
-          <a className="button action visualCta" href="#storybooks">Comprar meu Storybook</a>
+          <a className="button action visualCta" href="#storybooks">Quero criar o céu do meu filho</a>
         </div>
         <div className="productDesireCopy">
           <p className="eyebrow">Uma história que começa no nascimento</p>
@@ -123,7 +140,7 @@ export default function Home() {
         <img className="cosmicSymbol stepsPlanet" src="/assets/decor/simb2-transparent.png" alt="" aria-hidden="true" />
         <div className="sectionTitle"><p className="eyebrow">Do nascimento ao livro</p><h2>Como funciona em 3 passos</h2></div>
         <div className="steps"><article><b>1</b><h3>Garanta o Meu Primeiro Céu Plus</h3><p>Uma versão completa, com 16 páginas personalizadas e leitura aprofundada.</p></article><article><b>2</b><h3>Informe os dados durante o pagamento</h3><p>Preencha o formulário seguro com o primeiro nome, a data, a hora exata e o local de nascimento.</p></article><article><b>3</b><h3>Receba uma memória única</h3><p>Após os dados completos, o livro é criado, revisado e enviado em PDF por e-mail em até 24 horas.</p></article></div>
-        <div className="sectionCta"><a className="button action" href="#storybooks">Quero meu Storybook agora</a></div>
+        <div className="sectionCta"><a className="button action" href="#storybooks">Quero criar o céu do meu filho</a></div>
       </section>
 
       <section className="brandManifesto" aria-labelledby="manifesto-title">
@@ -144,7 +161,7 @@ export default function Home() {
 
       <section className="section order" id="pedido">
         <img className="cosmicSymbol orderMoon" src="/assets/decor/simb6-transparent.png" alt="" aria-hidden="true" />
-        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Compre, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Comprar meu Storybook</a></div>
+        <div className="orderIntro"><p className="eyebrow">Pagamento e dados no mesmo fluxo</p><h2 className="orderTitle"><span>Compre, pague</span><span>e envie os dados</span></h2><p className="muted">Durante a confirmação do pagamento, você receberá o formulário seguro para informar os dados necessários.</p><a className="button action orderReturn" href="#storybooks">Quero criar o céu do meu filho</a></div>
         <div className="afterPurchase"><p className="eyebrow">Durante a confirmação do pagamento</p><h3>Você receberá o formulário para iniciar a produção</h3><p>Serão solicitados somente os dados indispensáveis:</p><ul><li><strong>primeiro nome</strong> — nunca o nome completo;</li><li>data e hora exata do nascimento;</li><li>cidade, estado ou província e país;</li><li>faixa etária e opção de arte;</li><li>e-mail da pessoa responsável pela compra.</li></ul><div className="privacyMini"><strong>Privacidade desde o início</strong><p>O primeiro nome é suficiente para personalizar o livro. A página pública não coleta dados da criança.</p><p>Ao enviar os dados, a pessoa compradora confirma ser pai, mãe, responsável legal ou estar autorizada pelo responsável.</p><a href="/privacidade" target="_blank" rel="noreferrer">Leia a Política de Privacidade e LGPD</a></div><p className="deadlineNote">A produção começa após o pagamento aprovado e o envio completo e correto do formulário.</p></div>
       </section>
 
